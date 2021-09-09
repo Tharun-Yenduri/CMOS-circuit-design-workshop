@@ -1,4 +1,4 @@
-cmos ciruit design and spice simulation using sky130 Technology
+**cmos ciruit design and spice simulation using sky130 Technology**
 Day1:
 What is circuit design and why do we need spice?
 Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
