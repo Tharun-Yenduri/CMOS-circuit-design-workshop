@@ -64,5 +64,28 @@ There are five different type of corners,they are:
 we are using different w and l technology
 screenshot of w and l file
 Day2:
-
-
+The Id is a linear function of Vds in linear region
+The Id is dependent on channel length modulation and Vds in saturation region
+fig14
+The channel length which is having below 0.25u is referred as short channel
+When we are having the same W/L ratio with different width and Length:
+1.Id is quadratic dependent on Vgs when it is having long channel 
+2.Id is linearly dependent on Vgs when it is having short channel
+To observe this situation we are using the same W/L ratio with different width and Length where we are calcualting the Id at constant Vds, the Id is increasing quadratic which is having long channel where as the Id is  quadratic function of Vgs at low gate voltage and linear function of Vgs at high gate voltage which is having short channel and this is occuring due to velocity saturation effect
+fig 15 and fig16
+There are four regions of operation:
+1.
+2.
+3.
+4.
+Velocity Saturation effect:
+for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
+for the both cases the formulae of velocity is 
+velocity formulae
+here we equate the two conditions and we get the critical electic field 
+lets consider the Vgs-Vth=Vgt
+For the cutoff region Id=0 as Vgt<0
+For the remaining region the equation of Id is submit the vmin and we will get the Id equations
+fig17
+lab2 vds and vgs
+CMOS voltage Transfer characcteristics:
