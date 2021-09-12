@@ -1,14 +1,15 @@
-Logo of the workshop
-Introduction of the workshop
-**cmos ciruit design and spice simulation using sky130 Technology**
-Introdution to Sky130:Sky130 is a foundry which is used to built a chip using 130nm technology by providing pdk's(Process Development Kit)
+![image](https://user-images.githubusercontent.com/90343497/132997260-aeda2b04-fa37-4ebd-b032-93007941783f.png)
+*cmos ciruit design and spice simulation using sky130 Technology*
+Introduction of the workshop:This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology.This course content is divided for five days having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
+Introdution to Sky130: Sky130 is a foundry which is used to built a chip using 130nm technology by providing pdk's(Process Development Kit)
 Day1:
 What is circuit design and why do we need spice?
 Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
 Fig1 illustrates,depicts Basic circuit design
-
-Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits
-Fig 2 shows the readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load
+![fig1](https://user-images.githubusercontent.com/90343497/132997705-8eeb1fa7-67cf-42ae-8a58-ee7005a23bc2.png)
+Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load
+Fig 2 shows the readymade delay table
+![fig2](https://user-images.githubusercontent.com/90343497/132997730-a0370e4e-3cd0-4cb6-9d15-5c3c702e0149.png)
 Introduction NMOS in ciruit design:
 N type Metal Oxide Semiconductor(NMOS):It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors
 Fig 3
@@ -48,8 +49,10 @@ drift current formulae and drivation
 fig7 and fig8 and fig 9
 Saturation Region:
 Channel voltage=Vgs-Vds
-When we increase the potential of Vds gradually we observe the three conditions at this point
-fig 10
+When we increase the potential of Vds gradually we observe the three conditions at this point:
+1.Vgs-Vds>Vth
+2.Vgs-Vds=Vth
+3.Vgs-Vds<Vth
 When there is no channel formed near the drain region then region is called the pinch-off region and the condition is Vgs-Vds<=Vt(paper written)
 fig 10
 Introduction to spice:
@@ -64,16 +67,16 @@ Lab actvity:
 ![lab1-output](https://user-images.githubusercontent.com/90343497/132996820-cf972072-a1a1-4f36-8ecd-4ecc1dc0bfba.png)
 There are five different type of corners,they are:
 1.tt
-2.ff
-3.sf
+2.sf
+3.ff
 4.ss
-5.
+5.fs
 we are using different w and l technology
-screenshot of w and l file
+![Screenshot (113)](https://user-images.githubusercontent.com/90343497/132998090-95241ac1-0804-48d8-ae90-a6fe46a00c47.png)
 Day2:
 The Id is a linear function of Vds in linear region
 The Id is dependent on channel length modulation and Vds in saturation region
-fig14
+![fig 14](https://user-images.githubusercontent.com/90343497/132998124-6371df93-2792-431e-92a0-773bbaebe2e4.png)
 The channel length which is having below 0.25u is referred as short channel
 When we are having the same W/L ratio with different width and Length:
 1.Id is quadratic dependent on Vgs when it is having long channel 
@@ -92,7 +95,7 @@ velocity formulae
 here we equate the two conditions and we get the critical electic field 
 lets consider the Vgs-Vth=Vgt
 For the cutoff region Id=0 as Vgt<0
-For the remaining region the equation of Id is submit the vmin and we will get the Id equations
+For the remaining region the equation of Id submit the vmin and we will get the Id equations
 fig17
 lab2 vds and vgs
 ![lab2 vds spice](https://user-images.githubusercontent.com/90343497/132996856-3222012d-4750-4845-8eaa-500db5442cbe.png)
@@ -144,7 +147,9 @@ observations:
 4.On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
 Day4:
 Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
+
 Screen shot
+Based o
 lab4
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
