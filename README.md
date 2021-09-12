@@ -60,9 +60,8 @@ fig12:defining the netlist
 fig 13:nodes of the terminal
 Lab actvity:
 ![lab1 spicefile](https://user-images.githubusercontent.com/90343497/132996341-b03e2f86-ef34-4dd1-b6f2-60882db8f150.png)
-![lab1](https://user-images.githubusercontent.com/90343497/132996372-52922359-83d0-45af-908f-af642adb5105.png)
-![lab1-output (2)](https://user-images.githubusercontent.com/90343497/132996392-c52f7fbc-7b7a-416e-8490-d871449c063f.png)
-lab1,lab1 spice file ,lab1 -output
+![lab1](https://user-images.githubusercontent.com/90343497/132996762-585e5086-f355-46ae-8920-05b1661d90e1.png)
+![lab1-output](https://user-images.githubusercontent.com/90343497/132996820-cf972072-a1a1-4f36-8ecd-4ecc1dc0bfba.png)
 There are five different type of corners,they are:
 1.tt
 2.ff
@@ -96,6 +95,13 @@ For the cutoff region Id=0 as Vgt<0
 For the remaining region the equation of Id is submit the vmin and we will get the Id equations
 fig17
 lab2 vds and vgs
+![lab2 vds spice](https://user-images.githubusercontent.com/90343497/132996856-3222012d-4750-4845-8eaa-500db5442cbe.png)
+![lab2 vds spice simulation](https://user-images.githubusercontent.com/90343497/132996861-89a48dbf-b89c-4d65-b2d7-3324b3ac0d22.png)
+![lab2 vds output](https://user-images.githubusercontent.com/90343497/132996871-f5a8f4ed-ffa4-4391-91ff-812866b2c8f8.png)
+Vgs
+![lab2 vgs spice](https://user-images.githubusercontent.com/90343497/132996903-5427e994-5f8e-4072-8e82-dcacfdd18cb2.png)
+![lab2 vgs simulation](https://user-images.githubusercontent.com/90343497/132996906-91e08918-5bff-42aa-aab5-767ff04a8a31.png)
+![lab2 vgs output](https://user-images.githubusercontent.com/90343497/132996910-ccbf68fc-07d9-4d35-a7a4-e5b640c58fee.png)
 CMOS voltage Transfer characcteristics:
 When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called Complementary Mosfet.
 MOSFET as switch:
@@ -107,12 +113,18 @@ observations
 load curve of pmos transistor
 voltage transfer characteristics
 Day3:
-
 lab3 screenshots
+![lab3 spice file vtc](https://user-images.githubusercontent.com/90343497/132996978-0aa7ceb3-6bb7-427f-a645-e3bb7c8a5ef5.png)
+![lab 3 simulation vtc](https://user-images.githubusercontent.com/90343497/132996987-16a6d318-de5f-48b8-8b22-85044ad295d9.png)
+![lab 3 vtc output](https://user-images.githubusercontent.com/90343497/132997004-5f73393d-137b-4e19-b4c1-1191773fe998.png)
+![lab3 tran spice file](https://user-images.githubusercontent.com/90343497/132997019-a840dca0-2c6a-483e-b81e-969984bec8a0.png)
+![lab 3 tran spice simulation](https://user-images.githubusercontent.com/90343497/132997033-415ba4dc-6bc7-4e75-9f76-618ce5cc132e.png)
+![lab 3 tran output](https://user-images.githubusercontent.com/90343497/132997046-769ca728-1b6c-40c2-8f43-5c1ba8669901.png)
 The characteristics that define the CMOS inverter robustness are:
 1.Switching threshold voltage
 2.Noise Margin
-3.
+3.Power supply variation
+4.Device variations
 Switching threshold voltage of CMOS inverter(Vm):
 For getting the Swithcing threshold voltage of CMOS Vin=Vout ,the point at pmos and nmos are at saturation region 
 Here we are making two observations with one CMOS having w=0.36u,l=0.25u i.e same ascept ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having ascept ratio(W/L) where is switching of voltage is more when widht of pmos is two times more than widht of nmos.
@@ -134,5 +146,15 @@ Day4:
 Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
 Screen shot
 lab4
+![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
+![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
+![lab4 noise margin output](https://user-images.githubusercontent.com/90343497/132997110-93580c48-60fc-4219-bd5c-037bff2279a3.png)
 Day5:
 power supply variations:In this for the different power supplies how is the CMOS inverter is behaving
+lab5:
+![lab5 supply variation spice file](https://user-images.githubusercontent.com/90343497/132997200-2ea3267f-17f4-4537-a1c8-080ca00cd363.png)
+![lab 5 supply variation simulation](https://user-images.githubusercontent.com/90343497/132997204-58f29c12-90fc-462f-a0e2-fdd410194d7d.png)
+![lab 5 supply variation spice output](https://user-images.githubusercontent.com/90343497/132997208-9de9e667-72be-445d-a4ca-b40dac474b7a.png)
+![lab 5 device variation spice file](https://user-images.githubusercontent.com/90343497/132997212-50bd1649-e17d-429e-ac1b-61437907af65.png)
+![lab 5 device variation spice simulation](https://user-images.githubusercontent.com/90343497/132997218-735d036f-ae66-4940-8305-8db2abf383ef.png)
+![lab 5 device output](https://user-images.githubusercontent.com/90343497/132997230-26cbb07f-042b-4953-acbc-390ab1bb5212.png)
