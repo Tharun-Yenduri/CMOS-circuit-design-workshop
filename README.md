@@ -6,7 +6,6 @@ Day1:
 What is circuit design and why do we need spice?
 Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
 Fig1 illustrates,depicts Basic circuit design
-![fig1](https://user-images.githubusercontent.com/90343497/132997705-8eeb1fa7-67cf-42ae-8a58-ee7005a23bc2.png)
 Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load
 Fig 2 shows the readymade delay table
 ![fig2](https://user-images.githubusercontent.com/90343497/132997730-a0370e4e-3cd0-4cb6-9d15-5c3c702e0149.png)
@@ -149,7 +148,8 @@ Day4:
 Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
 
 Screen shot
-Based o
+Based on the observation table:
+w
 lab4
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
