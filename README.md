@@ -18,7 +18,7 @@ Fig 3
 4 terminal device
 consists of P-substrate
 Isolation Region(SiO2)
-
+n+ substrate
 There are three modes of operation:
 1.Cutoff region (Vgs<vth)
 2.Resistive or Linear Region (Vgs>vth) & (vds<vth)
