@@ -12,6 +12,10 @@ Fig 2 shows the readymade delay table of sample circuit which will give the dela
 Introduction NMOS in ciruit design:
 N type Metal Oxide Semiconductor(NMOS):It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors
 Fig 3
+4 terminal device
+consists of P-substrate
+Isolation Region(SiO2)
+
 There are three modes of operation:
 1.Cutoff region (Vgs<vth)
 2.Resistive or Linear Region (Vgs>vth) & (vds<vth)
@@ -55,6 +59,9 @@ fig11:model and moderl parameter,model file
 fig12:defining the netlist
 fig 13:nodes of the terminal
 Lab actvity:
+![lab1 spicefile](https://user-images.githubusercontent.com/90343497/132996341-b03e2f86-ef34-4dd1-b6f2-60882db8f150.png)
+![lab1](https://user-images.githubusercontent.com/90343497/132996372-52922359-83d0-45af-908f-af642adb5105.png)
+![lab1-output (2)](https://user-images.githubusercontent.com/90343497/132996392-c52f7fbc-7b7a-416e-8490-d871449c063f.png)
 lab1,lab1 spice file ,lab1 -output
 There are five different type of corners,they are:
 1.tt
