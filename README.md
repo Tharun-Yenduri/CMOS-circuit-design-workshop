@@ -6,6 +6,7 @@ Day1:
 What is circuit design and why do we need spice?
 Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
 Fig1 illustrates,depicts Basic circuit design
+
 Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits
 Fig 2 shows the readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load
 Introduction NMOS in ciruit design:
@@ -89,3 +90,42 @@ For the remaining region the equation of Id is submit the vmin and we will get t
 fig17
 lab2 vds and vgs
 CMOS voltage Transfer characcteristics:
+When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called Complementary Mosfet.
+MOSFET as switch:
+With infinite OFF resistance when |Vgs|<|Vth|
+With finite ON resistance when |Vgs|>|Vth|
+notes pic
+current path
+observations
+load curve of pmos transistor
+voltage transfer characteristics
+Day3:
+
+lab3 screenshots
+The characteristics that define the CMOS inverter robustness are:
+1.Switching threshold voltage
+2.Noise Margin
+3.
+Switching threshold voltage of CMOS inverter(Vm):
+For getting the Swithcing threshold voltage of CMOS Vin=Vout ,the point at pmos and nmos are at saturation region 
+Here we are making two observations with one CMOS having w=0.36u,l=0.25u i.e same ascept ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having ascept ratio(W/L) where is switching of voltage is more when widht of pmos is two times more than widht of nmos.
+Switching threshold voltage of cmos having same ascept ratio for both pmos and nmos is low compared to cmos having pmos of 2 times the width of nmos.
+At switching threshold voltage both pmos and nmos are in saturation region and both the transistors are turn "ON",at this voltage gain is high
+As Vin = Vout we can get Vgs = Vdd
+Switching threshold voltage formulae
+To calculate the rise time delay and fall time delay we will do the transient analysis of CMOS
+How to calculate the output rise time delay and fall time delay of an inverter:
+output rise time delay = rise time of output - fall time of input at 50% of Vout
+output fall time delay = fall time of output - rise time of input at 50% of Vout
+table:
+observations:
+1.When pmos width is 2 times the width of nmos the rise time delay and fall time delay is almost equal which is characterstics of clock inverter/buffer
+2.The remaining observations can be used for data path where data arrival time is less than data required time.
+3.When pmos width is 4.7 times the nmos then the vm is lies between pmos of widht 4 times the nmos widht and pmos of width 5 times the nmos width
+4.On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
+Day4:
+Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
+Screen shot
+lab4
+Day5:
+power supply variations:In this for the different power supplies how is the CMOS inverter is behaving
