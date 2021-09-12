@@ -7,6 +7,7 @@ Sky130 is a foundry which is used to built a chip using 130nm technology by prov
 ## Day1:
 ### What is circuit design and why do we need spice?
 Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
+
 Fig1 illustrates,depicts Basic circuit design
 Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load
 Fig 2 shows the readymade delay table
