@@ -8,13 +8,13 @@ Sky130 is a foundry which is used to built a chip using 130nm technology by prov
 ### What is circuit design and why do we need spice?
 * Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
 
-Fig1 illustrates Basic circuit design
+ Fig1 illustrates Basic circuit design:
 
 ![20210914_014951](https://user-images.githubusercontent.com/90343497/133152317-243e8e80-8464-469b-a2e1-fce553d655c7.jpg)
 
 * Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load.
 
-Fig 2 shows the readymade delay table
+ Fig 2 shows the readymade delay table:
 
 ![fig2](https://user-images.githubusercontent.com/90343497/132997730-a0370e4e-3cd0-4cb6-9d15-5c3c702e0149.png)
 
@@ -23,39 +23,40 @@ Fig 2 shows the readymade delay table
 **N type Metal Oxide Semiconductor(NMOS):**
 - It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors.
 
-fig 3 depicts the cross sectional view of NMOS
+ Fig 3 depicts the cross sectional view of NMOS:
 
 ![20210914_015013](https://user-images.githubusercontent.com/90343497/133152380-24a75c8d-0378-4ef6-ab43-3e3cfce09b88.jpg)
 
-It is a 4 terminal device
-1. Source(S)
-2. Gate(G)
-3. Drain(D)
-4. Body/substrate/bulk(B)
+- It is a 4 terminal device and the terminals are:
+  1. Source(S)
+  2. Gate(G)
+  3. Drain(D)
+  4. Body/substrate/bulk(B)
 - Isolation region
 - P-Substrate
 -  Gate Oxide
 - Metal gate
 - n+ Diffusion region
 
-There are three modes of operation:
+### There are three modes of operation:
 1. Cutoff region (Vgs<vth)
 2. Resistive or Linear Region (Vgs>vth) & (vds<vth)
 3. Saturation Region (Vgs>Vth) & (Vds>Vth)
 
-#### Initially when Vgs is  zero there will be no transfer of electrons between source and drain,so resistance of Sd is high.This region is called Cutoff Region.
+### 1.Cut-off Region:
+- Initially when Vgs is  zero there will be no transfer of electrons between source and drain,so resistance of Sd is high.This region is called Cutoff Region.
 
 ### Strong Inversion and threshold voltage:
 - By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
 - Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS.
 
-fig 4 shows strong inversion
+ Fig 4 shows strong inversion:
 
 ![fig4(Threshold volatage)](https://user-images.githubusercontent.com/90343497/133072908-56f27654-e1a0-4a89-aef3-854401bf4510.png)
 
 -Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
 
-fig 5 depicts the body effect in the presence of Vsb
+ Fig 5 depicts the body effect in the presence of Vsb:
 
 ![fig5(tune Vth using body)_LI](https://user-images.githubusercontent.com/90343497/133082790-dfa7af78-4970-4688-84a1-04410de8b933.jpg)
 
@@ -63,77 +64,120 @@ In the above figure:
 1. Additional reverse bias voltage at source and bulk
 2. Increase in depletion width due to additional reverse bias voltage
 
-Threshold volatage formulae
-fig4 and fig5
-2.Resistive Region:
-By increasing the potential beyond the threshold voltage, accumulation of electrons will be more between source and drain and this will leads to increase the channel width and there will be flow of electrons between source and drain.
-Vgs-Vth is the condition when the transistor will be on.
-When there is no potential given at Vds the voltage will be same across the whole channel
-When Vds is given to the transistor the voltage will be vary across the channel as the voltage at source is zero and voltage at drain is Vds,so the voltage acroos the channel is vary from 0 to Vds. 
-In the channel induced charge is directly proportional to Vgs-Vth
-Let's take L be effective channel length and consider length of the channel on x-axis and width of the channel on y-axis
-V(x) is voltage at point 'x' along channel
-SO Vgs-V(x) is effective gate to channel voltage at that point.
-Induced charge at point at 'x' is Q(x) is directly proportional to ([Vgs-V(x)]-Vth)
-Qi(x)∝ -([Vgs-V(x)]-V_t )
-Qi(x) = -Cox ([Vgs-V(x)]-Vt)
-Cox = oxide capacitance
-Cox = ∈ox/tox
-∈ox = Oxide permitivity
-    = 3.97x∈o(relative permitivity)
-    = 3.5x10e-11 F/m
-There are two types of current from device point of view:
-drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
-diffusion current- current due to difference in charge carrier concentration
-As there is potential difference in channel i.e 0 to Vds there will be drift current
-Id = velocity of charge carriers x available charge over channel widht
+Fig 6 shows derivation of formula for Threshold Voltage:
 
-drift current formulae and drivation
-fig7 and fig8 and fig 9
-Saturation Region:
-Channel voltage=Vgs-Vds
+![WhatsApp Image 2021-09-14 at 2 35 05 AM](https://user-images.githubusercontent.com/90343497/133156418-a861c567-8caa-45a3-8d56-d6e2a72c0d5d.jpeg)
+
+### 2.Resistive Region:
+- By increasing the potential beyond the threshold voltage, accumulation of electrons will be more between source and drain and this will leads to increase the channel width and there will be flow of electrons between source and drain.
+- Vgs-Vth is the condition where the transistor will be on.
+- When there is no potential given at Vds the voltage will be same across the whole channel
+-When Vds is given to the transistor the voltage will be vary across the channel as the voltage at source is zero and voltage at drain is Vds,so the voltage acroos the channel is vary from 0 to Vds. 
+- In the channel induced charge is directly proportional to Vgs-Vth
+  - **Qi(x)∝ -(Vgs-Vt)** 
+- Let's take L be effective channel length and consider length of the channel on x-axis and width of the channel on y-axis
+- V(x) is voltage at point 'x' along channel
+- So **Vgs-V(x)** is effective gate to channel voltage at that point.
+- Induced charge at point at 'x' is Q(x) is directly proportional to ([Vgs-V(x)]-Vth)
+  - Qi(x)∝ -([Vgs-V(x)]-Vt)
+  - Qi(x) = -Cox ([Vgs-V(x)]-Vt)
+  - Cox = oxide capacitance
+  - Cox = ∈ox/tox
+  - ∈ox = Oxide permitivity
+      * = 3.97x∈o(relative permitivity)
+      * = 3.5x10e-11 F/m
+   - tox = oxide thickness
+- There are two types of current from device point of view:
+1. drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
+2. diffusion current- current due to difference in charge carrier concentration
+- As there is potential difference in channel i.e 0 to Vds there will be drift current
+- **Id = velocity of charge carriers x available charge over channel width**
+
+ Fig 7 and 8 shows the derivation drain current formula:
+
+![20210914_004829](https://user-images.githubusercontent.com/90343497/133157864-aca747b4-7441-4a1f-bfbd-7be87c8cfc25.jpg)
+![20210914_005011](https://user-images.githubusercontent.com/90343497/133157894-a4d2e0e4-4c5b-44ab-8dc4-263f867ed153.jpg)
+
+### 3.Saturation Region:
+- Channel voltage = Vgs-Vds
+
+ Fig 9 depicts the relative between channel voltage and threshold voltage on increasing the Vds gradually:
+
 ![Screenshot (4)](https://user-images.githubusercontent.com/90343497/133107474-df6cd46d-12d8-43a7-a2ba-cc7e26c573ac.png)
-When we increase the potential of Vds gradually from the above table we get three conditions:
-1.Vgs-Vds>Vth
-2.Vgs-Vds=Vth
-3.Vgs-Vds<Vth
-When Vgs-Vds = Vt so at that point x,the strong inversion is about to happen.  
-When there is no channel formed near the drain region then region is called the pinch-off region and the condition is Vgs-Vds<=Vt
-(paper written)
-In saturation region for Id equation we will replace the Vds with Vgs-Vt in the Id equation of resistive region
-So the Id equation is
-Id = Kn/2[(Vgs-Vt)^2(1+λVds)]
+
+- When we increase the potential of Vds gradually from the above table we get three conditions:
+  1. Vgs-Vds>Vth 
+  2. Vgs-Vds=Vth
+  3. Vgs-Vds<Vth
+- When Vgs-Vds = Vt so at that point x,the strong inversion is about to happen.  
+- When there is no channel formed near the drain region then region is called the pinch-off region and the condition is Vgs-Vds<=Vt
+
+ Fig 10 illustrates the pinch-off region
+ 
+ ![20210914_005213](https://user-images.githubusercontent.com/90343497/133158956-a44dfa6f-0f9b-4d64-a1e6-e683d8f1aeb0.jpg)
+
+- In saturation region for Id equation we will replace the Vds with Vgs-Vt in the Id equation of resistive region
+- So the Id equation is
+  - Id = Kn/2[(Vgs-Vt)^2(1+λVds)]
+
+ Fig 11 shows about the channel length modulation:
+ 
 ![fig10](https://user-images.githubusercontent.com/90343497/133110995-897e5a33-eee6-4f05-95c9-151cb93e23bd.png)
-Introduction to spice:
-Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor and also to sweep the voltages. 
-Value of model parameters are unique for different respective technology.
-In Model file all the model parameters are availble provided by foundry.
-Nodes are point which connect the two terminals.
-The first step is to find the nodes of circuit and define the netlist.
-      ![image](https://user-images.githubusercontent.com/90343497/133114050-6d4884e8-a0d8-41ec-a226-80bc0a68c6d1.png)
-fig11:model and moderl parameter,model file 
+
+## Introduction to spice:
+- Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor and also to sweep the voltages. 
+- Value of model parameters are unique for different respective technologies.
+- In Model file, all the model parameters are availble provided by foundry.
+- Nodes are point which connect the two terminals.
+- The first step is to find the nodes of circuit and define the netlist.
+- Spice simulations are used to calculate the Id at different Vgs values. It is used to sweep the voltages.
+
+ Fig 12 shows about the steps of spice simulation:
+
+![Capture2](https://user-images.githubusercontent.com/90343497/133159720-9dbba673-09a4-4e3b-82f2-5daf23e5f2b7.PNG)
+
+ Fig 13 depicts the model and model parameters:
+
 ![fig11](https://user-images.githubusercontent.com/90343497/133114344-e227babf-dab4-4adb-b896-d09838f3916e.png)
-fig 13:nodes of the terminal
+
+In the above fig 13 the marked values are model parameters 
+
+ Fig 14 shows the nodes of the different components and the netlist description for the circuit:
+
 ![fig13](https://user-images.githubusercontent.com/90343497/133114468-da6efa83-4cf2-4593-ad75-c49911597f33.png)
-To run the spice file the command is ngspice file
-To plot the curve, let say we need Id vs Vds,after running the spice file we need to give plot -vdd#branch
-Lab actvity:
+
+- To run the spice file the command is ngspice filename
+- To plot the curve, let say we need Id vs Vds,after running the spice file we need to give plot -vdd#branch
+#### Lab actvity-1 :
+
+Below image is spice file of NMOS to get the Id vs Vds curve:
+
 ![lab1 spicefile](https://user-images.githubusercontent.com/90343497/132996341-b03e2f86-ef34-4dd1-b6f2-60882db8f150.png)
+
+Below image is spice simulation of NMOS to get the Id vs Vds curve:
+
 ![lab1](https://user-images.githubusercontent.com/90343497/132996762-585e5086-f355-46ae-8920-05b1661d90e1.png)
+
+Below image is the output waveform of NMOS Id vs Vds curve:
+
 ![lab1-output](https://user-images.githubusercontent.com/90343497/132996820-cf972072-a1a1-4f36-8ecd-4ecc1dc0bfba.png)
-How to check the Id:
-left click on the graph where we need to get the value of Id,
-we get some values on terminal like x0 and y0,x0 is the value on x-axis and y0 is the value on y-axis,
-As the above curve is Id vs Vds, y0 is the value of Id in amperes.
-In spice file, type of corner should be mentioned
-There are five different type of corners,they are:
-1.tt(typical corner)
-2.sf(slow fast corner)
-3.ff(fast fast corner)
-4.ss(slow slow corner)
-5.fs(fast slow corner)
-we are using different w and l technology
+
+- How to check the Id:
+  - Left click on the graph where we need to get the value of Id,
+  - Some values will be displayed on terminal like x0 and y0,x0 is the value on x-axis and y0 is the value on y-axis,
+  - As the above curve is Id vs Vds, y0 is the value of Id in amperes,
+  - In spice file, type of corner should be mentioned.
+- There are five different type of corners,they are:
+  1. tt(typical corner)
+  2. sf(slow fast corner)
+  3. ff(fast fast corner)
+  4. ss(slow slow corner)
+  5. fs(fast slow corner)
+
+Below image shows different w and l technologies used in lab
+
 ![Screenshot (113)](https://user-images.githubusercontent.com/90343497/132998090-95241ac1-0804-48d8-ae90-a6fe46a00c47.png)
+
 Day2:
 The Id is a linear function of Vds in linear region
 The Id is dependent on channel length modulation and Vds in saturation region
