@@ -27,13 +27,15 @@ Initially when Vgs is  zero there will be no transfer of electrons between sourc
 Strong Inversion and threshold voltage:
 By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
 Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS
-Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase. 
+![fig4(Threshold volatage)](https://user-images.githubusercontent.com/90343497/133072908-56f27654-e1a0-4a89-aef3-854401bf4510.png)
+Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
+![fig5(tune Vth using body)_LI](https://user-images.githubusercontent.com/90343497/133082790-dfa7af78-4970-4688-84a1-04410de8b933.jpg)
+
 Threshold volatage formulae
 fig4 and fig5
 2.Resistive Region:
-By increasing the potential beyond the threshold voltage accumulation of electrons will be more between source and drain and this will leads to increase the channel widht and there will be flow of electrons between source and drain.
+By increasing the potential beyond the threshold voltage, accumulation of electrons will be more between source and drain and this will leads to increase the channel width and there will be flow of electrons between source and drain.
 Vgs-Vth is the condition when the transistor will be on.
-Accumulation Charges will be directly proportional to Vgs-Vth
 When there is no potential given at Vds the voltage will be same across the whole channel
 When Vds is given to the transistor the voltage will be vary across the channel as the voltage at source is zero and voltage at drain is Vds,so the voltage acroos the channel is vary from 0 to Vds. 
 In the channel induced charge is directly proportional to Vgs-Vth
@@ -41,38 +43,63 @@ Let's take L be effective channel length and consider length of the channel on x
 V(x) is voltage at point 'x' along channel
 SO Vgs-V(x) is effective gate to channel voltage at that point.
 Induced charge at point at 'x' is Q(x) is directly proportional to ([Vgs-V(x)]-Vth)
-fig 6 
+Qi(x)∝ -([Vgs-V(x)]-V_t )
+Qi(x) = -Cox ([Vgs-V(x)]-Vt)
+Cox = oxide capacitance
+Cox = ∈ox/tox
+∈ox = Oxide permitivity
+    = 3.97x∈o(relative permitivity)
+    = 3.5x10e-11 F/m
 There are two types of current from device point of view:
 drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
 diffusion current- current due to difference in charge carrier concentration
 As there is potential difference in channel i.e 0 to Vds there will be drift current
 Id = velocity of charge carriers x available charge over channel widht
+
 drift current formulae and drivation
 fig7 and fig8 and fig 9
 Saturation Region:
 Channel voltage=Vgs-Vds
-When we increase the potential of Vds gradually we observe the three conditions at this point:
+![Screenshot (4)](https://user-images.githubusercontent.com/90343497/133107474-df6cd46d-12d8-43a7-a2ba-cc7e26c573ac.png)
+When we increase the potential of Vds gradually from the above table we get three conditions:
 1.Vgs-Vds>Vth
 2.Vgs-Vds=Vth
 3.Vgs-Vds<Vth
-When there is no channel formed near the drain region then region is called the pinch-off region and the condition is Vgs-Vds<=Vt(paper written)
-fig 10
+When Vgs-Vds = Vt so at that point x,the strong inversion is about to happen.  
+When there is no channel formed near the drain region then region is called the pinch-off region and the condition is Vgs-Vds<=Vt
+(paper written)
+In saturation region for Id equation we will replace the Vds with Vgs-Vt in the Id equation of resistive region
+So the Id equation is
+Id = Kn/2[(Vgs-Vt)^2(1+λVds)]
+![fig10](https://user-images.githubusercontent.com/90343497/133110995-897e5a33-eee6-4f05-95c9-151cb93e23bd.png)
 Introduction to spice:
-Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor 
-Value of model parameters are unique for different respective technology
+Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor and also to sweep the voltages. 
+Value of model parameters are unique for different respective technology.
+In Model file all the model parameters are availble provided by foundry.
+Nodes are point which connect the two terminals.
+The first step is to find the nodes of circuit and define the netlist.
+      ![image](https://user-images.githubusercontent.com/90343497/133114050-6d4884e8-a0d8-41ec-a226-80bc0a68c6d1.png)
 fig11:model and moderl parameter,model file 
-fig12:defining the netlist
+![fig11](https://user-images.githubusercontent.com/90343497/133114344-e227babf-dab4-4adb-b896-d09838f3916e.png)
 fig 13:nodes of the terminal
+![fig13](https://user-images.githubusercontent.com/90343497/133114468-da6efa83-4cf2-4593-ad75-c49911597f33.png)
+To run the spice file the command is ngspice file
+To plot the curve, let say we need Id vs Vds,after running the spice file we need to give plot -vdd#branch
 Lab actvity:
 ![lab1 spicefile](https://user-images.githubusercontent.com/90343497/132996341-b03e2f86-ef34-4dd1-b6f2-60882db8f150.png)
 ![lab1](https://user-images.githubusercontent.com/90343497/132996762-585e5086-f355-46ae-8920-05b1661d90e1.png)
 ![lab1-output](https://user-images.githubusercontent.com/90343497/132996820-cf972072-a1a1-4f36-8ecd-4ecc1dc0bfba.png)
+How to check the Id:
+left click on the graph where we need to get the value of Id,
+we get some values on terminal like x0 and y0,x0 is the value on x-axis and y0 is the value on y-axis,
+As the above curve is Id vs Vds, y0 is the value of Id in amperes.
+In spice file, type of corner should be mentioned
 There are five different type of corners,they are:
-1.tt
-2.sf
-3.ff
-4.ss
-5.fs
+1.tt(typical corner)
+2.sf(slow fast corner)
+3.ff(fast fast corner)
+4.ss(slow slow corner)
+5.fs(fast slow corner)
 we are using different w and l technology
 ![Screenshot (113)](https://user-images.githubusercontent.com/90343497/132998090-95241ac1-0804-48d8-ae90-a6fe46a00c47.png)
 Day2:
@@ -82,16 +109,17 @@ The Id is dependent on channel length modulation and Vds in saturation region
 The channel length which is having below 0.25u is referred as short channel
 When we are having the same W/L ratio with different width and Length:
 1.Id is quadratic dependent on Vgs when it is having long channel 
-2.Id is linearly dependent on Vgs when it is having short channel
+2.Id is linearly dependent on Vgs at low Vgs and quadratic dependent on Vgs at high Vgs  when it is having short channel
 To observe this situation we are using the same W/L ratio with different width and Length where we are calcualting the Id at constant Vds, the Id is increasing quadratic which is having long channel where as the Id is  quadratic function of Vgs at low gate voltage and linear function of Vgs at high gate voltage which is having short channel and this is occuring due to velocity saturation effect
 fig 15 and fig16
 There are four regions of operation:
-1.
-2.
-3.
-4.
+1.Cut-off region
+2.Linear or Resistive region
+3.Saturation region
+4.Velocity Saturation
 Velocity Saturation effect:
-for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
+Velocity saturation effect says for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
+![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
 for the both cases the formulae of velocity is 
 velocity formulae
 here we equate the two conditions and we get the critical electic field 
@@ -119,12 +147,30 @@ load curve of pmos transistor
 voltage transfer characteristics
 Day3:
 lab3 screenshots
+To plot the voltage Transfer Characteristics of CMOS inverter, while simulating the spice file of Voltage transfer characteristics use the below command
+plot out vs in
 ![lab3 spice file vtc](https://user-images.githubusercontent.com/90343497/132996978-0aa7ceb3-6bb7-427f-a645-e3bb7c8a5ef5.png)
 ![lab 3 simulation vtc](https://user-images.githubusercontent.com/90343497/132996987-16a6d318-de5f-48b8-8b22-85044ad295d9.png)
 ![lab 3 vtc output](https://user-images.githubusercontent.com/90343497/132997004-5f73393d-137b-4e19-b4c1-1191773fe998.png)
+To plot the transient analysis of CMOS inverter along with the input curve, while simulating the spice file of Transient analysis use the below command:
+plot out vs time in
+To get the pulse waveform:In below spice file of transient analysis of CMOS,in the netlist description rise time,fall time,starting,
+ex:Vin in 0 PULSE(0 1.8 0 0.1ns 0.1ns 2ns 4ns)
+first value inside pulse is
+second value inside pulse is
+third value inside pulse is
+fourth value inside pulse is
+fifth value inside pulse is
+sixth value inside pulse is
+seventh value inside pulse is
 ![lab3 tran spice file](https://user-images.githubusercontent.com/90343497/132997019-a840dca0-2c6a-483e-b81e-969984bec8a0.png)
 ![lab 3 tran spice simulation](https://user-images.githubusercontent.com/90343497/132997033-415ba4dc-6bc7-4e75-9f76-618ce5cc132e.png)
 ![lab 3 tran output](https://user-images.githubusercontent.com/90343497/132997046-769ca728-1b6c-40c2-8f43-5c1ba8669901.png)
+
+To calculate the rise time delay and fall time delay we will do the transient analysis of CMOS
+How to calculate the output rise time delay and fall time delay of an inverter:
+output rise time delay = rise time of output - fall time of input at 50% of Vout
+output fall time delay = fall time of output - rise time of input at 50% of Vout
 The characteristics that define the CMOS inverter robustness are:
 1.Switching threshold voltage
 2.Noise Margin
@@ -137,10 +183,7 @@ Switching threshold voltage of cmos having same ascept ratio for both pmos and n
 At switching threshold voltage both pmos and nmos are in saturation region and both the transistors are turn "ON",at this voltage gain is high
 As Vin = Vout we can get Vgs = Vdd
 Switching threshold voltage formulae
-To calculate the rise time delay and fall time delay we will do the transient analysis of CMOS
-How to calculate the output rise time delay and fall time delay of an inverter:
-output rise time delay = rise time of output - fall time of input at 50% of Vout
-output fall time delay = fall time of output - rise time of input at 50% of Vout
+
 table:
 observations:
 1.When pmos width is 2 times the width of nmos the rise time delay and fall time delay is almost equal which is characterstics of clock inverter/buffer
