@@ -20,7 +20,7 @@ Fig 2 shows the readymade delay table
 
 ### Introduction NMOS in ciruit design:
 
-** N type Metal Oxide Semiconductor(NMOS): **
+**N type Metal Oxide Semiconductor(NMOS):**
 - It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors.
 
 fig 3 depicts the cross sectional view of NMOS
