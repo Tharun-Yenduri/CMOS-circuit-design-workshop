@@ -32,11 +32,11 @@ It is a 4 terminal device
 2. Gate(G)
 3. Drain(D)
 4. Body/substrate/bulk(B)
-a. Isolation region
-b. P-Substrate
-c. Gate Oxide
-d. Metal gate
-e. n+ Diffusion region
+- Isolation region
+- P-Substrate
+-  Gate Oxide
+- Metal gate
+- n+ Diffusion region
 
 There are three modes of operation:
 1. Cutoff region (Vgs<vth)
@@ -47,10 +47,21 @@ There are three modes of operation:
 
 ### Strong Inversion and threshold voltage:
 - By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
-- Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS
+- Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS.
+
+fig 4 shows strong inversion
+
 ![fig4(Threshold volatage)](https://user-images.githubusercontent.com/90343497/133072908-56f27654-e1a0-4a89-aef3-854401bf4510.png)
-Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
+
+-Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
+
+fig 5 depicts the body effect in the presence of Vsb
+
 ![fig5(tune Vth using body)_LI](https://user-images.githubusercontent.com/90343497/133082790-dfa7af78-4970-4688-84a1-04410de8b933.jpg)
+
+In the above figure:
+1. Additional reverse bias voltage at source and bulk
+2. Increase in depletion width due to additional reverse bias voltage
 
 Threshold volatage formulae
 fig4 and fig5
