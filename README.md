@@ -177,11 +177,16 @@ The characteristics that define the CMOS inverter robustness are:
 3.Power supply variation
 4.Device variations
 Switching threshold voltage of CMOS inverter(Vm):
-For getting the Swithcing threshold voltage of CMOS Vin=Vout ,the point at pmos and nmos are at saturation region 
+Switching threshold voltage is one of the parameter that define the CMOS inverter robustness
+For getting the Switccing threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region 
+![Screenshot (144)](https://user-images.githubusercontent.com/90343497/133135001-d7dd76b1-bcc9-404b-a7bb-e26906bba62e.png)
 Here we are making two observations with one CMOS having w=0.36u,l=0.25u i.e same ascept ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having ascept ratio(W/L) where is switching of voltage is more when widht of pmos is two times more than widht of nmos.
 Switching threshold voltage of cmos having same ascept ratio for both pmos and nmos is low compared to cmos having pmos of 2 times the width of nmos.
 At switching threshold voltage both pmos and nmos are in saturation region and both the transistors are turn "ON",at this voltage gain is high
 As Vin = Vout we can get Vgs = Vdd
+The two ways that are to get the below analytical expressions:
+1.Analytical expression of Vm as a funtion of (W/L)p and (W/L)n
+2.Analytical expression of (W/L)p and (W/L)n as a funtion of Vm
 Switching threshold voltage formulae
 
 table:
@@ -195,7 +200,7 @@ Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glit
 
 Screen shot
 Based on the observation table:
-w
+
 lab4
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
