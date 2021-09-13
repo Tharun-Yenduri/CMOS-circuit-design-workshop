@@ -206,9 +206,17 @@ Any output voltage lies between 0 and Vil should be considered as logic 0 as it 
 Voh is output voltage which lies near to Vdd
 Any output voltage lies between Vih and Vdd should be consider as logic 1 as it may be used as logic 1 for next gate input
 Screen shot
+From the above pic:
+If any bump height lies between Vol and Vil can be considered as logic 0
+If any bump height lies between Vil and Vih can be considered as undefined logic as bump can go high or low
+If any bump height lies between Vih and Voh can be considered as logic 1
 Based on the observation table:
 ![Screenshot (102)](https://user-images.githubusercontent.com/90343497/133137705-00df9933-2bfb-4c6b-88cd-8cf2d71eacf9.png)
 1.If the pmos width lies between 1.8 and 2.2 there will be no huge difference in noise margin
+2.On increasing the pmos width the Noise Margin High is increasing  and Noise Margin Low is decreasing
+From the Noise Margin we can conclude the things:
+1.The area between Voh and Vdd,0 and Vol can be used used as logic 1 and logic 0 for digital design
+2.The undefined region in the curve can be used for amplification for analog design
 lab4
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
