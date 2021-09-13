@@ -198,6 +198,10 @@ Velocity saturation effect says for the lower values of electric field, the velo
 ![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
 for the both cases the formulae of velocity is 
 velocity formulae
+
+![20210914_005255](https://user-images.githubusercontent.com/90343497/133161324-25bbecc7-87b3-4b95-bcce-b213742db04b.jpg)
+![20210914_014951](https://user-images.githubusercontent.com/90343497/133161341-f9f93ef2-3e0b-44a2-82c0-8b56df349f14.jpg)
+
 here we equate the two conditions and we get the critical electic field 
 lets consider the Vgs-Vth=Vgt
 For the cutoff region Id=0 as Vgt<0
@@ -217,10 +221,21 @@ MOSFET as switch:
 With infinite OFF resistance when |Vgs|<|Vth|
 With finite ON resistance when |Vgs|>|Vth|
 notes pic
+![20210914_015850](https://user-images.githubusercontent.com/90343497/133161510-26ba6dc1-856c-4adb-af0e-9d61a23307d5.jpg)
+
 current path
+![CMOS](https://user-images.githubusercontent.com/90343497/133161606-8cdde982-96af-4748-9c74-9c4ae0c9db17.png)
+
 observations
+![20210914_005636](https://user-images.githubusercontent.com/90343497/133161815-5911eba9-107d-4ee8-ba7c-9127a411156f.jpg)
+![20210914_005735](https://user-images.githubusercontent.com/90343497/133161827-e47e0360-5d6d-4a20-92c0-0b99d5bba8d8.jpg)
+
 load curve of pmos transistor
+![20210914_005857](https://user-images.githubusercontent.com/90343497/133161886-b7dc6bd5-be74-4bc4-ae3f-0cee0547cd99.jpg)
+
 voltage transfer characteristics
+![20210914_005949](https://user-images.githubusercontent.com/90343497/133161916-cba740fc-0c6b-408d-b7ee-d71956dc98d9.jpg)
+
 Day3:
 lab3 screenshots
 To plot the voltage Transfer Characteristics of CMOS inverter, while simulating the spice file of Voltage transfer characteristics use the below command
@@ -264,6 +279,10 @@ The two ways that are to get the below analytical expressions:
 1.Analytical expression of Vm as a funtion of (W/L)p and (W/L)n
 2.Analytical expression of (W/L)p and (W/L)n as a funtion of Vm
 Switching threshold voltage formulae
+1.image 28 is pending
+![20210914_010212](https://user-images.githubusercontent.com/90343497/133162361-ff47a6b1-3a74-47ec-8fbf-1fe27a0e5e6c.jpg)
+![20210914_010352](https://user-images.githubusercontent.com/90343497/133162420-cc15a5ea-ef38-4b83-bf7f-e9b153454374.jpg)
+
 
 table:
 observations:
@@ -273,15 +292,20 @@ observations:
 4.On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
 Day4:
 Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
-Vil is input voltage which is less than Vdd/2 and it could be nearly Vdd/4
-Any input voltage lies between 0 and Vil should be considered as logic 0
-Vih is input voltage which is greater than Vdd/2 and it could be nearly 3/4 of Vdd
-Any input voltage lies between Vih and Vdd should be consider as logic 1
-Vol is output voltage which lies near to 0
-Any output voltage lies between 0 and Vil should be considered as logic 0 as it may be used as logic 0 for next gate input
-Voh is output voltage which lies near to Vdd
-Any output voltage lies between Vih and Vdd should be consider as logic 1 as it may be used as logic 1 for next gate input
-Screen shot
+![20210914_010425](https://user-images.githubusercontent.com/90343497/133162598-5bac1f25-2b48-4748-86d5-98a6f7be8086.jpg)
+
+![20210914_010521](https://user-images.githubusercontent.com/90343497/133162625-a99cd2ce-c345-46b0-b6b5-080d08dca509.jpg)
+
+- Vil is input voltage which is less than Vdd/2 and it could be nearly Vdd/4
+  - Any input voltage lies between 0 and Vil should be considered as logic 0
+- Vih is input voltage which is greater than Vdd/2 and it could be nearly 3/4 of Vdd
+  - Any input voltage lies between Vih and Vdd should be consider as logic 1
+- Vol is output voltage which lies near to 0
+  - Any output voltage lies between 0 and Vil should be considered as logic 0 as it may be used as logic 0 for next gate input
+- Voh is output voltage which lies near to Vdd
+  - Any output voltage lies between Vih and Vdd should be consider as logic 1 as it may be used as logic 1 for next gate input
+![Screenshot (100)](https://user-images.githubusercontent.com/90343497/133162859-10d3dd18-0d01-4c30-b79c-d6470e121335.png)
+
 From the above pic:
 If any bump height lies between Vol and Vil can be considered as logic 0
 If any bump height lies between Vil and Vih can be considered as undefined logic as bump can go high or low
@@ -290,7 +314,7 @@ Based on the observation table:
 ![Screenshot (102)](https://user-images.githubusercontent.com/90343497/133137705-00df9933-2bfb-4c6b-88cd-8cf2d71eacf9.png)
 1.If the pmos width lies between 1.8 and 2.2 there will be no huge difference in noise margin
 2.On increasing the pmos width the Noise Margin High is increasing  and Noise Margin Low is decreasing
-From the Noise Margin we can conclude the things:
+From the Noise Margin we can conclude the following things:
 1.The area between Voh and Vdd,0 and Vol can be used used as logic 1 and logic 0 for digital design
 2.The undefined region in the curve can be used for amplification for analog design
 lab4
