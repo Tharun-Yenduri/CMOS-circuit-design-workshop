@@ -231,7 +231,8 @@ observations
 ![20210914_005735](https://user-images.githubusercontent.com/90343497/133161827-e47e0360-5d6d-4a20-92c0-0b99d5bba8d8.jpg)
 
 load curve of pmos transistor
-![20210914_005857](https://user-images.githubusercontent.com/90343497/133161886-b7dc6bd5-be74-4bc4-ae3f-0cee0547cd99.jpg)
+![image](https://user-images.githubusercontent.com/90343497/133163359-8333edcc-7917-4dfd-afa5-8cba259d06b3.png)
+
 
 voltage transfer characteristics
 ![20210914_005949](https://user-images.githubusercontent.com/90343497/133161916-cba740fc-0c6b-408d-b7ee-d71956dc98d9.jpg)
