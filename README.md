@@ -6,22 +6,22 @@ This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Tech
 Sky130 is a foundry which is used to built a chip using 130nm technology by providing pdk's(Process Development Kit)
 ## Day1:
 ### What is circuit design and why do we need spice?
-*Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
+* Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
 
 Fig1 illustrates Basic circuit design
 
 ![20210914_014951](https://user-images.githubusercontent.com/90343497/133152317-243e8e80-8464-469b-a2e1-fce553d655c7.jpg)
 
-*Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load.
+* Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load.
 
 Fig 2 shows the readymade delay table
 
 ![fig2](https://user-images.githubusercontent.com/90343497/132997730-a0370e4e-3cd0-4cb6-9d15-5c3c702e0149.png)
 
-###Introduction NMOS in ciruit design:
+### Introduction NMOS in ciruit design:
 
-###N type Metal Oxide Semiconductor(NMOS):
--It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors.
+** N type Metal Oxide Semiconductor(NMOS): **
+- It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors.
 
 fig 3 depicts the cross sectional view of NMOS
 
@@ -43,11 +43,11 @@ There are three modes of operation:
 2. Resistive or Linear Region (Vgs>vth) & (vds<vth)
 3. Saturation Region (Vgs>Vth) & (Vds>Vth)
 
-####Initially when Vgs is  zero there will be no transfer of electrons between source and drain,so resistance of Sd is high.This region is called Cutoff Region.
+#### Initially when Vgs is  zero there will be no transfer of electrons between source and drain,so resistance of Sd is high.This region is called Cutoff Region.
 
-###Strong Inversion and threshold voltage:
--By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
--Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS
+### Strong Inversion and threshold voltage:
+- By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
+- Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS
 ![fig4(Threshold volatage)](https://user-images.githubusercontent.com/90343497/133072908-56f27654-e1a0-4a89-aef3-854401bf4510.png)
 Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
 ![fig5(tune Vth using body)_LI](https://user-images.githubusercontent.com/90343497/133082790-dfa7af78-4970-4688-84a1-04410de8b933.jpg)
