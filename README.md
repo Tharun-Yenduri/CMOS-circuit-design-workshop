@@ -221,12 +221,22 @@ lab4
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
 ![lab4 noise margin output](https://user-images.githubusercontent.com/90343497/132997110-93580c48-60fc-4219-bd5c-037bff2279a3.png)
+To calculate the noise margin:
+left click on the pmos slope then in the terminal two values will be displayed x0 and y0 where x0=Vil and y0=Voh
+left click on the nmos slope then in the terminal again two values will be displayed x0 and y0 where x0=Vih and y0=Vol
 Day5:
-power supply variations:In this for the different power supplies how is the CMOS inverter is behaving
+Power supply variation is one of the parameter that define the CMOS inverter Robustness.
+power supply variations:In this we will check for the different power supplies how is the CMOS inverter is behaving.
+let us sweep the power supply from 2.5V to 0.5V of pmos and nmos having W and L by using the script in under .control in spice file.
+Here we will do two observations:
+1.The gain of curve having 2.5V power supply is nearly 56% lower than the gain of curve having 0.5V power supply
+2.The energy of curve having 2.5V power supply is nearly 96% greater than the gain of curve having 0.5V power supply.
+![Screenshot (106)](https://user-images.githubusercontent.com/90343497/133143110-7f8bbb0b-d7b1-40f1-b251-71b13f1293eb.png)
 lab5:
 ![lab5 supply variation spice file](https://user-images.githubusercontent.com/90343497/132997200-2ea3267f-17f4-4537-a1c8-080ca00cd363.png)
 ![lab 5 supply variation simulation](https://user-images.githubusercontent.com/90343497/132997204-58f29c12-90fc-462f-a0e2-fdd410194d7d.png)
 ![lab 5 supply variation spice output](https://user-images.githubusercontent.com/90343497/132997208-9de9e667-72be-445d-a4ca-b40dac474b7a.png)
+To calculate
 ![lab 5 device variation spice file](https://user-images.githubusercontent.com/90343497/132997212-50bd1649-e17d-429e-ac1b-61437907af65.png)
 ![lab 5 device variation spice simulation](https://user-images.githubusercontent.com/90343497/132997218-735d036f-ae66-4940-8305-8db2abf383ef.png)
 ![lab 5 device output](https://user-images.githubusercontent.com/90343497/132997230-26cbb07f-042b-4953-acbc-390ab1bb5212.png)
