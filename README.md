@@ -223,7 +223,9 @@ lab4
 ![lab4 noise margin output](https://user-images.githubusercontent.com/90343497/132997110-93580c48-60fc-4219-bd5c-037bff2279a3.png)
 To calculate the noise margin:
 left click on the pmos slope then in the terminal two values will be displayed x0 and y0 where x0=Vil and y0=Voh
-left click on the nmos slope then in the terminal again two values will be displayed x0 and y0 where x0=Vih and y0=Vol
+left click on the nmos slope then in the terminal again two values will be displayed x1 and y1 where x1=Vih and y1=Vol
+To get Noise Margin High(Nmh) subtract y0 and x1 
+To get Noise Margin low(Nml) subtract x0 and y1
 Day5:
 Power supply variation is one of the parameter that define the CMOS inverter Robustness.
 power supply variations:In this we will check for the different power supplies how is the CMOS inverter is behaving.
@@ -236,7 +238,57 @@ lab5:
 ![lab5 supply variation spice file](https://user-images.githubusercontent.com/90343497/132997200-2ea3267f-17f4-4537-a1c8-080ca00cd363.png)
 ![lab 5 supply variation simulation](https://user-images.githubusercontent.com/90343497/132997204-58f29c12-90fc-462f-a0e2-fdd410194d7d.png)
 ![lab 5 supply variation spice output](https://user-images.githubusercontent.com/90343497/132997208-9de9e667-72be-445d-a4ca-b40dac474b7a.png)
-To calculate
+To calculate the gain:
+1.left click on the slope of pmos there will be two values displayed in terminal x0 and y0
+2.left click on the slope of nmos there will be two values displayed in terminal x1 and y1
+3.gain is equal to ratio of change in output and change in input i.e y0-y1/x0-x1
+conclusion from lab:
+1.As power supply voltage decreases the gain is increasing but when the power supply is 1V then the gain cannot be increased as 1V is not sufficient to turn on the pmos and nmos transistor 
+Device variation:
+Device Variation is also one of the variation that defines the CMOS inverter robustness
+1.Etching variation
+2.Oxide thickness variation
+Etching variation:
+Etching is one of the fabrication step
+It will define the structures in layout of CMOS
+It will define the structure i.e Width and length
+Let's take the layout of CMOS and we have:
+P-diffusion region,
+Poly-silicon area, 
+Metal layer, 
+N-diffusion region,
+Contacts between two layers
+Thickness of poly-silicon layer is the gate length annd it defines at which node we are using like 20nm, 30nm, 45nm, etc..
+Thickness of the P-diffusion layer is the width of the gate of the PMOS and the thickness of the N-diffusion layer is the width of the gate of the NMOS
+While fabricating the mosfet there will be difference in ideal widht,length and actual width and length 
+As we know Id is dependent on W and L,so there will be impact on Id due to etching variation
+![Screenshot (124)](https://user-images.githubusercontent.com/90343497/133146877-be59e294-d8ef-486b-b494-3b84342d33a9.png)
+Inverter chain:
+When Inverters are connected side by side in a chain then they are known as Inverter chain as shown in above figure.
+The inverters that are at head and tail ends are having different structures compared to middle inverters as they may connected to other gates or flipflops,so the distortion of width and length are more at head and tail ends.
+As the middle inverters are sorrounded by first and last inverters they may have same width and length and distortion is less.
+![Screenshot (125)](https://user-images.githubusercontent.com/90343497/133147912-ee6f8fda-4f9a-4dce-bab3-b60d9372b18f.png)
+Oxide thickness(Cox):
+While fabricating the mosfet there will be difference in ideal oxide thickness of gate and actual oxide thickness of gate
+As we know Id is dependent on Cox,so there will be impact on Id due to Oxide thickness variation.
+These two are minimal variations that define the CMOS inverter robustness.
+Lets sweep the width of pmos and nmos
+Strong Pmos:
+It is least resistance PMOS i.e it has less resistance path to charge output capacitor
+It is wider in size
+Weak NMOS:
+It is high resistance NMOS as area is inversely proportional to resistance
+It is lower in size 
+Weak PMOS:
+It is high resistance PMOS 
+It is lower in size
+Strong NMOS:
+It is low resistance NMOS
+It is higher in size
 ![lab 5 device variation spice file](https://user-images.githubusercontent.com/90343497/132997212-50bd1649-e17d-429e-ac1b-61437907af65.png)
 ![lab 5 device variation spice simulation](https://user-images.githubusercontent.com/90343497/132997218-735d036f-ae66-4940-8305-8db2abf383ef.png)
 ![lab 5 device output](https://user-images.githubusercontent.com/90343497/132997230-26cbb07f-042b-4953-acbc-390ab1bb5212.png)
+Conclusion from lab:
+As PMOS width is higher than the NMOS,the output of PMOS is staying for long time when compared to NMOS curve.
+Conclusion:
+
