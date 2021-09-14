@@ -109,15 +109,14 @@
 ## Section-2:NMOS Resistive region and Saturation region
 
 ### 2.Resistive Region:
-- By increasing the potential beyond the threshold voltage, accumulation of electrons will be more between source and drain and this will leads to increase the channel width and there will be flow of electrons between source and drain.
-- Vgs-Vth is the condition where the transistor will be on.
+- By increasing the potential beyond the threshold voltage, accumulation of electrons will be more between source and drain and this will leads to increase the channel and there will be flow of electrons between source and drain.
 - When there is no potential given at Vds the voltage will be same across the whole channel
--When Vds is given to the transistor the voltage will be vary across the channel as the voltage at source is zero and voltage at drain is Vds,so the voltage acroos the channel is vary from 0 to Vds. 
+- When Vds is given to the transistor the voltage will be vary across the channel as the voltage at source is zero and voltage at drain is Vds,so the voltage across the channel is vary from 0 to Vds i.e from source to drain. 
 - In the channel induced charge is directly proportional to Vgs-Vth
   - **Qi(x)∝ -(Vgs-Vt)** 
 - Let's take L be effective channel length and consider length of the channel on x-axis and width of the channel on y-axis
 - V(x) is voltage at point 'x' along channel
-- So **Vgs-V(x)** is effective gate to channel voltage at that point.
+- So **Vgs-V(x)** is effective gate to channel voltage at that any particular point .
 - Induced charge at point at 'x' is Q(x) is directly proportional to ([Vgs-V(x)]-Vth)
   - Qi(x)∝ -([Vgs-V(x)]-Vt)
   - Qi(x) = -Cox ([Vgs-V(x)]-Vt)
