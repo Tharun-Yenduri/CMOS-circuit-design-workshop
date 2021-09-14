@@ -4,17 +4,17 @@
 # **Index**
 - Introduction to the workshop
 - Introduction to Sky130
-- #Day1-:-Basics-of-NMOS-drain-current(Id)-vs-Drain-to-Source-voltage(Vds)
-  - #Section-1:Introduction to Circuit design and Spice simulations
-  - #Section-2:NMOS Resistive region and Saturation region
-  - #Section-3:Introduction to spice
-  - #Lab activity-1
- - #Day2:Velocity Saturation and basics of CMOS inverter VTC
-   - #Section-1:Spice Simulation for lower nodes and Velocity Saturation Effect 
-   - #Lab activity-2
-   - #Section-2:CMOS voltage Transfer Characteristics
-  - #Day3:CMOS Switching threshold and and dynamic simulations
-    - #Section-1:Voltage Transfer Characteristics and Spice simulations
+- Day1: Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
+  - Section-1:Introduction to Circuit design and Spice simulations
+  - Section-2:NMOS Resistive region and Saturation region
+  - Section-3:Introduction to spice
+  - Lab activity-1
+ - Day2:Velocity Saturation and basics of CMOS inverter VTC
+   - Section-1:Spice Simulation for lower nodes and Velocity Saturation Effect 
+   - Lab activity-2
+   - Section-2:CMOS voltage Transfer Characteristics
+  - Day3:CMOS Switching threshold and and dynamic simulations
+    - Section-1:Voltage Transfer Characteristics and Spice simulations
     - Lab activity-3
     - Section-2:Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage
   - Day4:CMOS Noise Margin robustness evaluation
