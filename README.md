@@ -382,13 +382,13 @@ In the above fig 13 the marked values are model parameters
   - plot out vs time in
 - To get the pulse waveform:In below spice file of transient analysis of CMOS,in the netlist description rise time,fall time,starting,
   - ex:Vin in 0 PULSE(0 1.8 0 0.1ns 0.1ns 2ns 4ns)
-    - first value inside pulse is minimum voltage level
-    - second value inside pulse is
-    - third value inside pulse is initial delay
-    - fourth value inside pulse is rise time 
-    - fifth value inside pulse is fall time 
-    - sixth value inside pulse is pulse width
-    - seventh value inside pulse is time period
+    - first field inside pulse is minimum voltage level
+    - second field inside pulse is maximum voltage level
+    - third field inside pulse is initial delay
+    - fourth field inside pulse is rise time 
+    - fifth field inside pulse is fall time 
+    - sixth field inside pulse is pulse width
+    - seventh field inside pulse is time period
  
 - Below image is spice file of transient analysis of CMOS
  
