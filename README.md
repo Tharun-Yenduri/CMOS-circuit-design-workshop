@@ -404,8 +404,8 @@ In the above fig 13 the marked values are model parameters
 
 - To calculate the rise time delay and fall time delay we will do the transient analysis of CMOS
 - How to calculate the output rise time delay and fall time delay of an inverter:
-  - output rise time delay = rise time of output at 50% rise - fall time of input at 50% fall
-  - output fall time delay = fall time of output at 50% fall- rise time of input at 50% rise
+  - output rise time delay = time at 50% of rise - 50% of fall 
+  - output fall time delay = time at 50% of fall - 50% of rise
 
 ## Section-2:Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage
 
