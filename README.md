@@ -164,12 +164,12 @@
 ![fig10](https://user-images.githubusercontent.com/90343497/133110995-897e5a33-eee6-4f05-95c9-151cb93e23bd.png)
 
 ## Section-3:Introduction to spice
-- Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor and also to sweep the voltages. 
-- Value of model parameters are unique for different respective technologies.
-- In Model file, all the model parameters are availble provided by foundry.
-- Nodes are point which connect the two terminals.
-- The first step is to find the nodes of circuit and define the netlist.
-- Spice simulations are used to calculate the Id at different Vgs values. It is used to sweep the voltages.
+- Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor and also used to sweep the voltages. 
+- Value of model parameters are different for different respective technologies.
+- In Model file, all the available model parameters are provided by foundry.
+- Nodes are the point which connects the two terminals.
+- The first step is to find the nodes of circuit and to define the netlist.
+- Spice simulations are used to calculate the Id at different Vgs values.
 
  Fig 12 shows about the steps of spice simulation:
 
