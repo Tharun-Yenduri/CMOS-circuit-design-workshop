@@ -77,8 +77,8 @@
 
 ### There are three modes of operation:
 1. Cutoff region (Vgs<vth)
-2. Resistive or Linear Region (Vgs>vth) & (vds<vth)
-3. Saturation Region (Vgs>Vth) & (Vds>Vth)
+2. Resistive or Linear Region (Vgs>vth) & (vds<Vgs-vth)
+3. Saturation Region (Vgs>Vth) & (Vds>=Vgs-Vth)
 
 ### 1.Cut-off Region:
 - Initially when Vgs is  zero there will be no transfer of electrons between source and drain,so resistance of Sd is high.This region is called Cutoff Region.
