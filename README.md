@@ -84,8 +84,8 @@ Fig 6 shows derivation of formula for Threshold Voltage:
   - Cox = oxide capacitance
   - Cox = ∈ox/tox
   - ∈ox = Oxide permitivity
-      * = 3.97x∈o(relative permitivity)
-      * = 3.5x10e-11 F/m
+        = 3.97x∈o(relative permitivity)
+        = 3.5x10e-11 F/m
    - tox = oxide thickness
 - There are two types of current from device point of view:
 1. drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
@@ -178,23 +178,38 @@ Below image shows different w and l technologies used in lab
 
 ![Screenshot (113)](https://user-images.githubusercontent.com/90343497/132998090-95241ac1-0804-48d8-ae90-a6fe46a00c47.png)
 
-Day2:
-The Id is a linear function of Vds in linear region
-The Id is dependent on channel length modulation and Vds in saturation region
+## Day2:
+- The Id is a linear function of Vds in linear region
+- The Id is dependent on channel length modulation and Vds in saturation region
+
+Fig 15 illustrates the regions of NMOS
+
 ![fig 14](https://user-images.githubusercontent.com/90343497/132998124-6371df93-2792-431e-92a0-773bbaebe2e4.png)
-The channel length which is having below 0.25u is referred as short channel
-When we are having the same W/L ratio with different width and Length:
-1.Id is quadratic dependent on Vgs when it is having long channel 
-2.Id is linearly dependent on Vgs at low Vgs and quadratic dependent on Vgs at high Vgs  when it is having short channel
-To observe this situation we are using the same W/L ratio with different width and Length where we are calcualting the Id at constant Vds, the Id is increasing quadratic which is having long channel where as the Id is  quadratic function of Vgs at low gate voltage and linear function of Vgs at high gate voltage which is having short channel and this is occuring due to velocity saturation effect
-fig 15 and fig16
-There are four regions of operation:
-1.Cut-off region
-2.Linear or Resistive region
-3.Saturation region
-4.Velocity Saturation
-Velocity Saturation effect:
-Velocity saturation effect says for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
+
+- In the above Fig 15 
+  - The region before Vds=Vgs-Vt is linear region which is linear function of Vds and 
+  - The region after Vds=Vgs-Vt is saturation region which is dependent on channel length modulation and Vds.
+- The channel length which is having below 0.25u is referred as short channel
+- When we are having the same W/L ratio with different width and Length:
+  1.Id is quadratic dependent on Vgs when it is having long channel 
+  2.Id is linearly dependent on Vgs at low Vgs and quadratic dependent on Vgs at high Vgs  when it is having short channel
+
+Fig 16 shows the behaviour of NMOS when it is having long channel and short channel
+
+![fig 15](https://user-images.githubusercontent.com/90343497/133208793-5c308208-a4bf-409b-8272-07511dcc99af.png)
+
+- To observe this situation we are using the same W/L ratio with different width and Length where we are calcualting the Id at constant Vds, the Id is increasing quadratic which is having long channel where as the Id is  quadratic function of Vgs at low gate voltage and linear function of Vgs at high gate voltage which is having short channel and this is occuring due to velocity saturation effect
+
+#### There are four regions of operation for short channel:
+1. Cut-off region
+2. Linear or Resistive region
+3. Saturation region
+4. Velocity Saturation
+
+- Velocity Saturation effect:
+  - Velocity saturation effect says for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
+
+Below image is the graph between electric charge and its velocity
 ![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
 for the both cases the formulae of velocity is 
 velocity formulae
