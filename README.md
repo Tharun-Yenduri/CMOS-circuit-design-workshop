@@ -1,13 +1,32 @@
 # **CMOS Ciruit Design and Spice Simulation using Sky130 Technology**
 ![image](https://user-images.githubusercontent.com/90343497/132997260-aeda2b04-fa37-4ebd-b032-93007941783f.png)
 
+# **Index**
+- Introduction of the workshop
+- Introduction to Sky130
+- Day1:Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
+  - Section-1:Introduction to Circuit design and Spice simulations
+  - Section-2:NMOS Resistive region and Saturation region
+  - Section-3:Introduction to spice
+  - Lab activity-1
+ - Day2:
+   - Section-1: 
+   - Section-2:
+  - Day3:
+    - Section-1:
+    - Section-2:
+  - Day4:
+    - Section-1:
+   - Day5:
+     - Section-1:
+     - Section-2:   
 ## Introduction of the workshop:
-- This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology.This course content is divided for five days having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
+- This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology organized by VLSI System Design.This course content is divided for five days having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
 ## Introdution to Sky130: 
 - Sky130 is a foundry which is used to built a chip using 130nm gate channel length by providing pdk's(Process Development Kit) i.e models,libraires. 
 - Sky130 releases data in open source format
 
-## Day1:
+## Day1:Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
 
 ## Section-1:Introduction to Circuit design and Spice simulations
 
@@ -41,7 +60,7 @@
   4. Body/substrate/bulk(B)
 - Isolation region
 - P-Substrate
--  Gate Oxide
+- Gate Oxide
 - Metal gate
 - n+ Diffusion region
 
@@ -97,12 +116,12 @@
         = 3.5x10e-11 F/m
    - tox = oxide thickness
 - There are two types of current from device point of view:
-1. drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
-2. diffusion current- current due to difference in charge carrier concentration
+1. Drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
+2. Diffusion current- current due to difference in charge carrier concentration
 - As there is potential difference in channel i.e 0 to Vds there will be drift current
 - **Id = velocity of charge carriers x available charge over channel width**
 
- Fig 7 and 8 shows the derivation drain current formula:
+- Fig 7 and 8 shows the derivation drain current formula:
 
 ![20210914_004829](https://user-images.githubusercontent.com/90343497/133157864-aca747b4-7441-4a1f-bfbd-7be87c8cfc25.jpg)
 ![20210914_005011](https://user-images.githubusercontent.com/90343497/133157894-a4d2e0e4-4c5b-44ab-8dc4-263f867ed153.jpg)
@@ -110,7 +129,7 @@
 ### 3.Saturation Region:
 - Channel voltage = Vgs-Vds
 
- Fig 9 depicts the relative between channel voltage and threshold voltage on increasing the Vds gradually:
+- Fig 9 depicts the relative between channel voltage and threshold voltage on increasing the Vds gradually:
 
 ![Screenshot (4)](https://user-images.githubusercontent.com/90343497/133107474-df6cd46d-12d8-43a7-a2ba-cc7e26c573ac.png)
 
@@ -129,11 +148,11 @@
 - So the Id equation is
   - Id = Kn/2[(Vgs-Vt)^2(1+λVds)]
 
- Fig 11 shows about the channel length modulation:
+- Fig 11 shows about the channel length modulation:
  
 ![fig10](https://user-images.githubusercontent.com/90343497/133110995-897e5a33-eee6-4f05-95c9-151cb93e23bd.png)
 
-## Introduction to spice:
+## Section-3:Introduction to spice
 - Spice is used to get the characteristics of nmos and pmos as welll as delay of transistor and also to sweep the voltages. 
 - Value of model parameters are unique for different respective technologies.
 - In Model file, all the model parameters are availble provided by foundry.
@@ -157,17 +176,17 @@ In the above fig 13 the marked values are model parameters
 
 - To run the spice file the command is ngspice filename
 - To plot the curve, let say we need Id vs Vds,after running the spice file we need to give plot -vdd#branch
-#### Lab actvity-1 :
+### Lab actvity-1 :
 
-Below image is spice file of NMOS to get the Id vs Vds curve:
+- Below image is spice file of NMOS to get the Id vs Vds curve:
 
 ![lab1 spicefile](https://user-images.githubusercontent.com/90343497/132996341-b03e2f86-ef34-4dd1-b6f2-60882db8f150.png)
 
-Below image is spice simulation of NMOS to get the Id vs Vds curve:
+- Below image is spice simulation of NMOS to get the Id vs Vds curve:
 
 ![lab1](https://user-images.githubusercontent.com/90343497/132996762-585e5086-f355-46ae-8920-05b1661d90e1.png)
 
-Below image is the output waveform of NMOS Id vs Vds curve:
+- Below image is the output waveform of NMOS Id vs Vds curve:
 
 ![lab1-output](https://user-images.githubusercontent.com/90343497/132996820-cf972072-a1a1-4f36-8ecd-4ecc1dc0bfba.png)
 
@@ -183,15 +202,18 @@ Below image is the output waveform of NMOS Id vs Vds curve:
   4. ss(slow slow corner)
   5. fs(fast slow corner)
 
-Below image shows different w and l technologies used in lab
+- Below image shows different w and l technologies used in lab
 
 ![Screenshot (113)](https://user-images.githubusercontent.com/90343497/132998090-95241ac1-0804-48d8-ae90-a6fe46a00c47.png)
 
-## Day2:
+## Day2:Velocity Saturation and basics of CMOS inverter VTC
+
+## Section-1:Spice Simulation for lower nodes and Velocity Saturation Effect
+
 - The Id is a linear function of Vds in linear region
 - The Id is dependent on channel length modulation and Vds in saturation region
 
-Fig 15 illustrates the regions of NMOS
+- Fig 15 illustrates the regions of NMOS
 
 ![fig 14](https://user-images.githubusercontent.com/90343497/132998124-6371df93-2792-431e-92a0-773bbaebe2e4.png)
 
@@ -200,10 +222,10 @@ Fig 15 illustrates the regions of NMOS
   - The region after Vds=Vgs-Vt is saturation region which is dependent on channel length modulation and Vds.
 - The channel length which is having below 0.25u is referred as short channel
 - When we are having the same W/L ratio with different width and Length:
-  1.Id is quadratic dependent on Vgs when it is having long channel 
-  2.Id is linearly dependent on Vgs at low Vgs and quadratic dependent on Vgs at high Vgs  when it is having short channel
+  1. Id is quadratic dependent on Vgs when it is having long channel 
+  2. Id is linearly dependent on Vgs at low Vgs and quadratic dependent on Vgs at high Vgs  when it is having short channel
 
-Fig 16 shows the behaviour of NMOS when it is having long channel and short channel
+- Fig 16 shows the behaviour of NMOS when it is having long channel and short channel
 
 ![fig 15](https://user-images.githubusercontent.com/90343497/133208793-5c308208-a4bf-409b-8272-07511dcc99af.png)
 
@@ -218,7 +240,7 @@ Fig 16 shows the behaviour of NMOS when it is having long channel and short chan
 - Velocity Saturation effect:
   - Velocity saturation effect says for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
 
- Fig 17 is the graph between electric charge and its velocity
+- Fig 17 is the graph between electric charge and its velocity
 
 ![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
 
@@ -228,7 +250,7 @@ Fig 16 shows the behaviour of NMOS when it is having long channel and short chan
   - Here we equate the above two conditions and we get the critical electic field,For contunity, put ∈ = ∈c
   - **2Vsat = μn.∈c** 
       - **∈c = (2Vsat/μn)** 
-   - when rederiving the drain current using above condition
+   - while rederiving the drain current using above condition
    - Id=-Vn(x).Qi(x).W
    - **Id = (μn.Cox/1+(Vds/∈c.L)).(W/L).[(Vgs-Vt)Vds-Vds^2/2]** which is too complex while using for calculations.
    - For the cutoff region Id=0 as Vgt<0
@@ -245,61 +267,64 @@ Fig 16 shows the behaviour of NMOS when it is having long channel and short chan
  - When Vmin is Vdsat we will get the equation for drain current of Velocity Satuarion region.
 - The observation is peak current is low for short channel compared to peak current for long channel.
 
-#### lab2 activity:
+### lab2 activity:
 
-Below image is spice file of Id vs Vds curve for the short channel of NMOS
+- Below image is spice file of Id vs Vds curve for the short channel of NMOS
 
 ![lab2 vds spice](https://user-images.githubusercontent.com/90343497/132996856-3222012d-4750-4845-8eaa-500db5442cbe.png)
 
-Below image is spice simulation of Id vs Vds for the short channel of NMOS
+- Below image is spice simulation of Id vs Vds for the short channel of NMOS
 
 ![lab2 vds spice simulation](https://user-images.githubusercontent.com/90343497/132996861-89a48dbf-b89c-4d65-b2d7-3324b3ac0d22.png)
 
-Below image is output waveform of Id vs Vds curve for short channel of NMOS
+- Below image is output waveform of Id vs Vds curve for short channel of NMOS
 
 ![lab2 vds output](https://user-images.githubusercontent.com/90343497/132996871-f5a8f4ed-ffa4-4391-91ff-812866b2c8f8.png)
 
-Below image is spice file of Id vs Vgs where Voltage(Vds) is sweep from 0 to 2.5
+- Below image is spice file of Id vs Vgs where Voltage(Vds) is sweep from 0 to 2.5
 
 ![lab2 vgs spice](https://user-images.githubusercontent.com/90343497/132996903-5427e994-5f8e-4072-8e82-dcacfdd18cb2.png)
 
-Below image is simulation of Id vs Vgs curve 
+- Below image is simulation of Id vs Vgs curve 
 
 ![lab2 vgs simulation](https://user-images.githubusercontent.com/90343497/132996906-91e08918-5bff-42aa-aab5-767ff04a8a31.png)
 
-Below image is output waveform of Id vs Vgs
+- Below image is output waveform of Id vs Vgs
 
 ![lab2 vgs output](https://user-images.githubusercontent.com/90343497/132996910-ccbf68fc-07d9-4d35-a7a4-e5b640c58fee.png)
 
-### CMOS voltage Transfer characcteristics:
+### Section-2:CMOS voltage Transfer Characteristics:
 - When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called Complementary Mosfet.
 - MOSFET as switch:
   - With infinite OFF resistance when |Vgs|<|Vth|
   - With finite ON resistance when |Vgs|>|Vth|
 
-Fig 18 shows the behavior of PMOS and NMOS when Vin is changing
+- Fig 18 shows the behavior of PMOS and NMOS when Vin is changing
 
 ![20210914_015850](https://user-images.githubusercontent.com/90343497/133215276-24f79cec-8a3f-46c8-948d-f4777ac1fdf7.jpg)
 
- Fig 19 illustrates the direction of current path
+- Fig 19 illustrates the direction of current path
  - Idsp Drain to source current through PMOS and it will charge the output load Capacitor
  - Idsn Drain to source current throught NMOS and this will discharge the output load Capacitor
  - Idsp=-Idsn
  - Idsp+Idsn=0
 
+- Fig 19 illustrates the CMOS inverter and direction of current path of pmos and nmos
+
 ![CMOS](https://user-images.githubusercontent.com/90343497/133161606-8cdde982-96af-4748-9c74-9c4ae0c9db17.png)
 
- Fig 20 is the observations made from the CMOS inverter and load curve of NMOS 
+- Fig 20 is the observations made from the CMOS inverter and load curve of NMOS 
  
 ![20210914_005636](https://user-images.githubusercontent.com/90343497/133161815-5911eba9-107d-4ee8-ba7c-9127a411156f.jpg)
 
- Fig 21 depicts changing the PMOS curve in terms of Vin
+- Fig 21 depicts changing the PMOS curve in terms of Vin
  
 ![20210914_005735](https://user-images.githubusercontent.com/90343497/133161827-e47e0360-5d6d-4a20-92c0-0b99d5bba8d8.jpg)
 
 - To change the PMOS curve in terms of Vin and Vout , few observation to made:
- Vgsp | V | Vin=Vgsp+Vdd
- -----|---|-------------
+ 
+ Vgsp |   V  |Vin=Vgsp+Vdd|
+ -----|------|------------|
  Vgsp1|   0  |     2      |
  Vgsp1| -0.5 |    1.5     |
  Vgsp1|  -1  |     1      |
@@ -307,26 +332,31 @@ Fig 18 shows the behavior of PMOS and NMOS when Vin is changing
  Vgsp1|  -2  |     0      |
 
 - As Vout = Vdd + Vdsp
-Load curve of PMOS transistor
+- Fig 22 depicts the Load curve of PMOS transistor
 
- Fig 22 shows that when Vin and Vout of PMOS and NMOS are taken in one graph they are intersecting at some voltages and those intersection points to be plotted on Vin vs Vout which will give the Voltage Transfer Characteristics of CMOS
+![20210914_005857](https://user-images.githubusercontent.com/90343497/133284427-2fe84528-6318-441a-a5ce-973f208adfec.jpg)
+
+- Fig 23 shows that when Vin and Vout of PMOS and NMOS are taken in one graph they are intersecting at some voltages and those intersection points to be plotted on Vin vs Vout which will give the Voltage Transfer Characteristics of CMOS
 
 ![20210914_005949](https://user-images.githubusercontent.com/90343497/133161916-cba740fc-0c6b-408d-b7ee-d71956dc98d9.jpg)
 
-Day3:
-#### lab3 activity:
+## Day3:CMOS Switching threshold and and dynamic simulations
+
+## Section-1:Voltage Transfer Characteristics and Spice simulations
+
+### lab3 activity:
 - To plot the voltage Transfer Characteristics of CMOS inverter, while simulating the spice file of Voltage transfer characteristics use the below command
   - plot out vs in
  
-Below image is spice file of voltage transfer characteristics of CMOS
+- Below image is spice file of voltage transfer characteristics of CMOS
  
 ![lab3 spice file vtc](https://user-images.githubusercontent.com/90343497/132996978-0aa7ceb3-6bb7-427f-a645-e3bb7c8a5ef5.png)
 
-Below image is spice simulation of voltage transfer characteristics of CMOS
+- Below image is spice simulation of voltage transfer characteristics of CMOS
 
 ![lab 3 simulation vtc](https://user-images.githubusercontent.com/90343497/132996987-16a6d318-de5f-48b8-8b22-85044ad295d9.png)
 
- Below image waveform of voltage transfer characteristics of CMOS
+- Below image waveform of voltage transfer characteristics of CMOS
  
 ![lab 3 vtc output](https://user-images.githubusercontent.com/90343497/132997004-5f73393d-137b-4e19-b4c1-1191773fe998.png)
 
@@ -342,15 +372,15 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
     - sixth value inside pulse is pulse width
     - seventh value inside pulse is time period
  
- Below image is spice file of transient analysis of CMOS
+- Below image is spice file of transient analysis of CMOS
  
 ![lab3 tran spice file](https://user-images.githubusercontent.com/90343497/132997019-a840dca0-2c6a-483e-b81e-969984bec8a0.png)
 
- Below image is spice simulation of transient analysis of CMOS
+- Below image is spice simulation of transient analysis of CMOS
 
 ![lab 3 tran spice simulation](https://user-images.githubusercontent.com/90343497/132997033-415ba4dc-6bc7-4e75-9f76-618ce5cc132e.png)
 
- Below image is output waveform of transient analysis of CMOS which give rise time delay and fall time delay
+ - Below image is output waveform of transient analysis of CMOS which give rise time delay and fall time delay
  
 ![lab 3 tran output](https://user-images.githubusercontent.com/90343497/132997046-769ca728-1b6c-40c2-8f43-5c1ba8669901.png)
 
@@ -358,6 +388,8 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
 - How to calculate the output rise time delay and fall time delay of an inverter:
   - output rise time delay = rise time of output - fall time of input at 50% of Vout
   - output fall time delay = fall time of output - rise time of input at 50% of Vout
+
+## Section-2:Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage
 
 #### The characteristics that define the CMOS inverter robustness are:
 1. Switching threshold voltage
@@ -368,7 +400,8 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
 #### Switching threshold voltage of CMOS inverter(Vm):
 - Switching threshold voltage is one of the parameter that define the CMOS inverter robustness
 - For getting the Switccing threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region
- Fig 23 illustrates the change in switching of voltage when PMOS width is 2.5 times greater than width of NMOS
+ 
+- Fig 24 illustrates the change in switching of voltage when PMOS width is 2.5 times greater than width of NMOS
  
 ![Screenshot (144)](https://user-images.githubusercontent.com/90343497/133135001-d7dd76b1-bcc9-404b-a7bb-e26906bba62e.png)
 
@@ -410,14 +443,18 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
   2. The remaining observations can be used for data path where data arrival time is less than data required time.
   3. When pmos width is 4.7 times the nmos then the vm is lies between pmos of widht 4 times the nmos widht and pmos of width 5 times the nmos width
   4. On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
-### Day4:
+
+## Day4:CMOS Noise Margin robustness evaluation
+
+## Section-1:Static behaviour evaluation of CMOS inverter robustness-Noise Margin
+
 - Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
 
-Fig 22 illustrates the ideal I/O characteristics of inverter with Infinite slope and finite slope
+- Fig 25 illustrates the ideal I/O characteristics of inverter with Infinite slope and finite slope
 
 ![20210914_010425](https://user-images.githubusercontent.com/90343497/133162598-5bac1f25-2b48-4748-86d5-98a6f7be8086.jpg)
 
-Fig 23 depicts the actual I/O characteristics of inverter and the scale from 0 to Vdd to show the noise margin high and noise margin low
+- Fig 26 depicts the actual I/O characteristics of inverter and the scale from 0 to Vdd to show the noise margin high and noise margin low
 
 ![20210914_010521](https://user-images.githubusercontent.com/90343497/133162625-a99cd2ce-c345-46b0-b6b5-080d08dca509.jpg)
 
@@ -430,7 +467,7 @@ Fig 23 depicts the actual I/O characteristics of inverter and the scale from 0 t
 - Voh is output voltage which lies near to Vdd
   - Any output voltage lies between Vih and Vdd should be consider as logic 1 as it may be used as logic 1 for next gate input
 
- Fig 24 shows the Noise Margin summary of bumps
+- Fig 27 shows the Noise Margin summary of bumps
  
 ![Screenshot (100)](https://user-images.githubusercontent.com/90343497/133162859-10d3dd18-0d01-4c30-b79c-d6470e121335.png)
 
@@ -439,13 +476,13 @@ Fig 23 depicts the actual I/O characteristics of inverter and the scale from 0 t
   2. If any bump height lies between Vil and Vih can be considered as undefined logic as bump can go high or low
   3.If any bump height lies between Vih and Voh can be considered as logic 1
 
- Wp/Lp | x.Wn/Ln |  NMh  | Nml |   Vm   |
- ------|---------|------------|-----------|--------|
+ Wp/Lp | x.Wn/Ln |  NMh  |    Nml    |   Vm   |
+ ------|---------|-------|-----------|--------|
  Wp/Lp | 1.Wn/Ln |  0.3  |   71ps    |  0.99V |
- Wp/Lp | 2.Wn/Ln |    0.35    |   86ps    |  1.2V  |
- Wp/Lp | 3.Wn/Ln |    0.4    |   80ps    |  1.25V |
- Wp/Lp | 4.Wn/Ln |    0.42    |   84ps    |  1.35V |
- Wp/Lp | 5.Wn/Ln |    0.42    |   88ps    |  1.4V  |
+ Wp/Lp | 2.Wn/Ln |  0.35 |   86ps    |  1.2V  |
+ Wp/Lp | 3.Wn/Ln |  0.4  |   80ps    |  1.25V |
+ Wp/Lp | 4.Wn/Ln |  0.42 |   84ps    |  1.35V |
+ Wp/Lp | 5.Wn/Ln |  0.42 |   88ps    |  1.4V  |
  
 - Based on the observation table:
   1. If the pmos width lies between 1.8 and 2.2 there will be no huge difference in noise margin
@@ -456,15 +493,15 @@ Fig 23 depicts the actual I/O characteristics of inverter and the scale from 0 t
  
 ### lab4 actvity:
 
-Below image is the spice file of VtC curve to get the Noise Margin
+- Below image is the spice file of VtC curve to get the Noise Margin
 
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 
- Below image is the spice simulation of VtC curve to get the Noise Margin
+- Below image is the spice simulation of VtC curve to get the Noise Margin
 
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
 
- Below image is the waveform of VtC curve to get the Noise Margin
+- Below image is the waveform of VtC curve to get the Noise Margin
  
 ![lab4 noise margin output](https://user-images.githubusercontent.com/90343497/132997110-93580c48-60fc-4219-bd5c-037bff2279a3.png)
 
@@ -473,7 +510,11 @@ Below image is the spice file of VtC curve to get the Noise Margin
   - left click on the nmos slope then in the terminal again two values will be displayed x1 and y1 where x1=Vih and y1=Vol
   - To get Noise Margin High(Nmh) subtract y0 and x1 
   - To get Noise Margin low(Nml) subtract x0 and y1
-Day5:
+
+## Day5:CMOS power supply and device variation robustness evaluation
+
+## Section-1:Static behaviour evaluation-CMOS inverter robustness-Power supply variation
+
 - Power supply variation is one of the parameter that define the CMOS inverter Robustness.
 - Power supply variations:In this we will check for the different power supplies how is the CMOS inverter is behaving.
 - let us sweep the power supply from 2.5V to 0.5V of pmos and nmos having W and L by using the script in under .control in spice file.
@@ -503,8 +544,9 @@ Day5:
   2. Left click on the slope of nmos there will be two values displayed in terminal x1 and y1
   3. Gain is equal to ratio of change in output and change in input i.e y0-y1/x0-x1
 - Conclusion from lab:
-  1. As power supply voltage decreases the gain is increasing but when the power supply is 1V then the gain cannot be increased as 1V is not sufficient to turn on the pmos and nmos transistor 
-### Device variation:
+  1. As power supply voltage decreases the gain is increasing but when the power supply is 1V then the gain cannot be increased as 1V is not sufficient to turn on the pmos and nmos transistor.
+   
+## Section-2:Statice behaviour evaluation-CMOS inverter robustness-Device variation:
 - Device Variation is also one of the variation that defines the CMOS inverter robustness
   1. Etching variation
   2. Oxide thickness variation
@@ -577,5 +619,5 @@ Day5:
 - Conclusion from lab:
   - As PMOS width is higher than the NMOS,the output of PMOS is staying for long time when compared to NMOS curve.
 
-### Conclusion:
+## Conclusion:
 
