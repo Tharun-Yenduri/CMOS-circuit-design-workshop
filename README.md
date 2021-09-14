@@ -287,7 +287,7 @@ In the above fig 13 the marked values are model parameters
 
 ![lab2 vds spice](https://user-images.githubusercontent.com/90343497/132996856-3222012d-4750-4845-8eaa-500db5442cbe.png)
 
-- Below image is spice simulation of Id vs Vds for the short channel of NMOS
+- Below image is spice simulation log of Id vs Vds for the short channel of NMOS
 
 ![lab2 vds spice simulation](https://user-images.githubusercontent.com/90343497/132996861-89a48dbf-b89c-4d65-b2d7-3324b3ac0d22.png)
 
@@ -299,7 +299,7 @@ In the above fig 13 the marked values are model parameters
 
 ![lab2 vgs spice](https://user-images.githubusercontent.com/90343497/132996903-5427e994-5f8e-4072-8e82-dcacfdd18cb2.png)
 
-- Below image is simulation of Id vs Vgs curve 
+- Below image is simulation log of Id vs Vgs curve 
 
 ![lab2 vgs simulation](https://user-images.githubusercontent.com/90343497/132996906-91e08918-5bff-42aa-aab5-767ff04a8a31.png)
 
@@ -308,7 +308,7 @@ In the above fig 13 the marked values are model parameters
 ![lab2 vgs output](https://user-images.githubusercontent.com/90343497/132996910-ccbf68fc-07d9-4d35-a7a4-e5b640c58fee.png)
 
 ### Section-2:CMOS voltage Transfer Characteristics:
-- When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called Complementary Mosfet.
+- When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called **C**omplementary **Mos**fet.
 - MOSFET as switch:
   - With infinite OFF resistance when |Vgs|<|Vth|
   - With finite ON resistance when |Vgs|>|Vth|
