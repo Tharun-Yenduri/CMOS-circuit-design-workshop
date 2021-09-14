@@ -417,7 +417,7 @@ In the above fig 13 the marked values are model parameters
 
 #### Switching threshold voltage of CMOS inverter(Vm):
 - Switching threshold voltage is one of the parameter that define the CMOS inverter robustness
-- For getting the Switccing threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region
+- To get the Switching threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region
  
 - Fig 24 illustrates the change in switching of voltage when PMOS width is 2.5 times greater than width of NMOS
  
