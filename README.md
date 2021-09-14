@@ -4,17 +4,17 @@
 # **Index**
 - Introduction to the workshop
 - Introduction to Sky130
-- Day1:Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
-  - Section-1:Introduction to Circuit design and Spice simulations
-  - Section-2:NMOS Resistive region and Saturation region
-  - Section-3:Introduction to spice
-  - Lab activity-1
- - Day2:Velocity Saturation and basics of CMOS inverter VTC
-   - Section-1:Spice Simulation for lower nodes and Velocity Saturation Effect 
-   - Lab activity-2
-   - Section-2:CMOS voltage Transfer Characteristics
-  - Day3:CMOS Switching threshold and and dynamic simulations
-    - Section-1:Voltage Transfer Characteristics and Spice simulations
+- #Day1:Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
+  - #Section-1:Introduction to Circuit design and Spice simulations
+  - #Section-2:NMOS Resistive region and Saturation region
+  - #Section-3:Introduction to spice
+  - #Lab activity-1
+ - #Day2:Velocity Saturation and basics of CMOS inverter VTC
+   - #Section-1:Spice Simulation for lower nodes and Velocity Saturation Effect 
+   - #Lab activity-2
+   - #Section-2:CMOS voltage Transfer Characteristics
+  - #Day3:CMOS Switching threshold and and dynamic simulations
+    - #Section-1:Voltage Transfer Characteristics and Spice simulations
     - Lab activity-3
     - Section-2:Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage
   - Day4:CMOS Noise Margin robustness evaluation
@@ -25,6 +25,8 @@
      - Lab activity-5
      - Section-2:Statice behaviour evaluation-CMOS inverter robustness-Device variation
      - Lab activity-6
+    - Conclusion
+    - Reference
    
 ## Introduction to the workshop
 
@@ -628,5 +630,12 @@ In the above fig 13 the marked values are model parameters
 - Conclusion from lab:
   - As PMOS width is higher than the NMOS,the output of PMOS is staying for long time when compared to NMOS curve.
 
-## Conclusion:
+## Conclusion
+
+- In this Workshop I got more practical knowledge on CMOS by doing Labs and i have learnt the concepts from scratch like Introduction to NMOS and its regions to very great extent like Static behaviour of evaluation of CMOS under different variations.Workshop was delivered in a way to get both theoretical knowledge and practical knowledge right after the lectures and there are assessments  .I got positive hope by doing this workshop that i can do my best in VLSI industry.
+
+## Reference
+- https://www.vsdiat.com/
+- https://www.vlsisystemdesign.com/vsd-iat/
+- https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
