@@ -85,7 +85,7 @@
 
 ### Strong Inversion and threshold voltage:
 - By applying certain potential there will be formation of depletion region and depletion width will increase under gate area then by increasing the potential at Vgs,at some point the part of p-type substrate which is between source and drain(under gate area) will be converted to n-type material i.e electrons will be accumulated between source and drain hence the positive charges repels away from gate area,this phenomenon is called **Strong Inversion** 
-- Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS.
+- Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltage or It is minimum voltage required for the movement of electrons from source to drain.With the help of Spice simulations threshold voltage of transistor device can be determined.
 
 - Fig 4 shows strong inversion:
 
