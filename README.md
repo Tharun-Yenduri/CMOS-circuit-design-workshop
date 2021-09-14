@@ -57,7 +57,8 @@
 ### Introduction to NMOS in ciruit design:
 
 **N type Metal Oxide Semiconductor(NMOS):**
-- It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors.
+- It is a four terminal voltage controlled device where input voltage(Vgs) is used to control the device
+- Isolation region(SiO2) will differentiate the two transistors.
 
 - Fig 3 depicts the cross sectional view of NMOS:
 
