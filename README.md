@@ -2,26 +2,33 @@
 ![image](https://user-images.githubusercontent.com/90343497/132997260-aeda2b04-fa37-4ebd-b032-93007941783f.png)
 
 # **Index**
-- Introduction of the workshop
+- Introduction to the workshop
 - Introduction to Sky130
 - Day1:Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
   - Section-1:Introduction to Circuit design and Spice simulations
   - Section-2:NMOS Resistive region and Saturation region
   - Section-3:Introduction to spice
   - Lab activity-1
- - Day2:
-   - Section-1: 
-   - Section-2:
-  - Day3:
-    - Section-1:
-    - Section-2:
-  - Day4:
-    - Section-1:
-   - Day5:
-     - Section-1:
-     - Section-2:   
-## Introduction of the workshop:
-- This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology organized by VLSI System Design.This course content is divided for five days having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
+ - Day2:Velocity Saturation and basics of CMOS inverter VTC
+   - Section-1:Spice Simulation for lower nodes and Velocity Saturation Effect 
+   - Lab activity-2
+   - Section-2:CMOS voltage Transfer Characteristics
+  - Day3:CMOS Switching threshold and and dynamic simulations
+    - Section-1:Voltage Transfer Characteristics and Spice simulations
+    - Lab activity-3
+    - Section-2:Static behavior evaluation-CMOS inverter robustnes-Switching threshold voltage
+  - Day4:CMOS Noise Margin robustness evaluation
+    - Section-1:Static behaviour evaluation of CMOS inverter robustness-Noise Margin
+    - Lab activity-4
+   - Day5:CMOS power supply and device variation robustness evaluation
+     - Section-1:Static behaviour evaluation-CMOS inverter robustness-Power supply variation
+     - Lab activity-5
+     - Section-2:Statice behaviour evaluation-CMOS inverter robustness-Device variation
+     - Lab activity-6
+   
+## Introduction to the workshop
+
+- This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology organized by VLSI System Design.This course content is divided for five days from 8-12 september-2021 having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
 ## Introdution to Sky130: 
 - Sky130 is a foundry which is used to built a chip using 130nm gate channel length by providing pdk's(Process Development Kit) i.e models,libraires. 
 - Sky130 releases data in open source format
@@ -267,7 +274,7 @@ In the above fig 13 the marked values are model parameters
  - When Vmin is Vdsat we will get the equation for drain current of Velocity Satuarion region.
 - The observation is peak current is low for short channel compared to peak current for long channel.
 
-### lab2 activity:
+### Lab activity-2:
 
 - Below image is spice file of Id vs Vds curve for the short channel of NMOS
 
@@ -344,7 +351,7 @@ In the above fig 13 the marked values are model parameters
 
 ## Section-1:Voltage Transfer Characteristics and Spice simulations
 
-### lab3 activity:
+### Lab activity-3:
 - To plot the voltage Transfer Characteristics of CMOS inverter, while simulating the spice file of Voltage transfer characteristics use the below command
   - plot out vs in
  
@@ -491,7 +498,7 @@ In the above fig 13 the marked values are model parameters
  1. The area between Voh and Vdd,0 and Vol can be used used as logic 1 and logic 0 for digital design
  2. The undefined region in the curve can be used for amplification for analog design
  
-### lab4 actvity:
+### Lab actvity-4:
 
 - Below image is the spice file of VtC curve to get the Noise Margin
 
@@ -525,7 +532,7 @@ In the above fig 13 the marked values are model parameters
    - Increase in Gain(close to 50% improvement)
    - Significant reduction in energy(close to 90% improvement)
 
-### lab5 activity:
+### Lab activity-5:
 
 - Below image is the spice file for supply variation when voltage is sweeped from 2.5v to 0.5v
  
@@ -546,7 +553,7 @@ In the above fig 13 the marked values are model parameters
 - Conclusion from lab:
   1. As power supply voltage decreases the gain is increasing but when the power supply is 1V then the gain cannot be increased as 1V is not sufficient to turn on the pmos and nmos transistor.
    
-## Section-2:Statice behaviour evaluation-CMOS inverter robustness-Device variation:
+## Section-2:Statice behaviour evaluation-CMOS inverter robustness-Device variation
 - Device Variation is also one of the variation that defines the CMOS inverter robustness
   1. Etching variation
   2. Oxide thickness variation
@@ -605,6 +612,8 @@ In the above fig 13 the marked values are model parameters
   - It is higher in size
  
  - Below image is spice file where width of PMOS and width of NMOS are sweeped
+ 
+ ### Lab activity-6
  
 ![lab 5 device variation spice file](https://user-images.githubusercontent.com/90343497/132997212-50bd1649-e17d-429e-ac1b-61437907af65.png)
 
