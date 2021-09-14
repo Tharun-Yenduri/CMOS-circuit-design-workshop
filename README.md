@@ -313,9 +313,13 @@ In the above fig 13 the marked values are model parameters
   - With infinite OFF resistance when |Vgs|<|Vth|
   - With finite ON resistance when |Vgs|>|Vth|
 
-- Fig 18 shows the behavior of PMOS and NMOS when Vin is changing
-
-![20210914_015850](https://user-images.githubusercontent.com/90343497/133215276-24f79cec-8a3f-46c8-948d-f4777ac1fdf7.jpg)
+- Operation of an inverter
+- PMOS
+  - If Vin is low, current flows from source to drain and PMOS gets short that makes the output high
+  - If Vin is high, no current flows from source to drain and PMOS acts as open circuit 
+- NMOS
+  - If Vin is high, current flows from drain to source and NMOS gets short that makes the output low
+  - If Vin is low, no current flows from drain to source and PMOS acts as open circuit   
 
 - Fig 19 illustrates the direction of current path
  - Idsp Drain to source current through PMOS and it will charge the output load Capacitor
