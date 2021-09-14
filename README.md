@@ -209,118 +209,199 @@ Fig 16 shows the behaviour of NMOS when it is having long channel and short chan
 - Velocity Saturation effect:
   - Velocity saturation effect says for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
 
-Below image is the graph between electric charge and its velocity
+ Fig 17 is the graph between electric charge and its velocity
 
 ![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
 
 - As we know formula Velocity = mobility.electric field
   - **Vn(m/s)=μn.∈/(1+(∈/∈c)) for ∈ <= ∈c**
   - **Vsat                     for ∈ >= ∈c**
-  - For contunity, put ∈ = ∈c
+  - Here we equate the above two conditions and we get the critical electic field,For contunity, put ∈ = ∈c
   - **2Vsat = μn.∈c** 
       - **∈c = (2Vsat/μn)** 
    - when rederiving the drain current using above condition
    - Id=-Vn(x).Qi(x).W
-   - **Id = (μn.Cox/1+(Vds/∈c.L)).(W/L).[(Vgs-Vt)Vds-Vds^2/2]** which is too complex while using 
+   - **Id = (μn.Cox/1+(Vds/∈c.L)).(W/L).[(Vgs-Vt)Vds-Vds^2/2]** which is too complex while using for calculations.
+   - For the cutoff region Id=0 as Vgt<0
+   - For the remaining regions,to get the equation of Id submit the vmin and we will get the Id equations for different regions.
    - Let **Id = kn[(Vgt.Vmin)-Vmin^2/2].[1+λVds]** 
      - where Vgt= Vgs-Vt
      - where Vmin=min(Vgt,Vds,Vdsat)
      - Vdsat is one of the model parameter
     - When Vmin is Vdsat the drain current equation in Velocity Saturation region:
       - **Id = kn.[(Vgt.Vdsat)-Vdsat^2/2].[1+λVds]**  
-![20210914_005255](https://user-images.githubusercontent.com/90343497/133161324-25bbecc7-87b3-4b95-bcce-b213742db04b.jpg)
-![20210914_014951](https://user-images.githubusercontent.com/90343497/133161341-f9f93ef2-3e0b-44a2-82c0-8b56df349f14.jpg)
+ 
+ - When Vmin is Vgt we will get the equation for drain current of saturation region as we know Vds>Vgt,
+ - When Vmin is Vds we will get the equation for drain current of linear region as it will be linear function of Vds,
+ - When Vmin is Vdsat we will get the equation for drain current of Velocity Satuarion region.
+- The observation is peak current is low for short channel compared to peak current for long channel.
 
-here we equate the two conditions and we get the critical electic field 
-lets consider the Vgs-Vth=Vgt
-For the cutoff region Id=0 as Vgt<0
-For the remaining region the equation of Id submit the vmin and we will get the Id equations
-fig17
-lab2 vds and vgs
+#### lab2 activity:
+
+Below image is spice file of Id vs Vds curve for the short channel of NMOS
+
 ![lab2 vds spice](https://user-images.githubusercontent.com/90343497/132996856-3222012d-4750-4845-8eaa-500db5442cbe.png)
-![lab2 vds spice simulation](https://user-images.githubusercontent.com/90343497/132996861-89a48dbf-b89c-4d65-b2d7-3324b3ac0d22.png)
-![lab2 vds output](https://user-images.githubusercontent.com/90343497/132996871-f5a8f4ed-ffa4-4391-91ff-812866b2c8f8.png)
-Vgs
-![lab2 vgs spice](https://user-images.githubusercontent.com/90343497/132996903-5427e994-5f8e-4072-8e82-dcacfdd18cb2.png)
-![lab2 vgs simulation](https://user-images.githubusercontent.com/90343497/132996906-91e08918-5bff-42aa-aab5-767ff04a8a31.png)
-![lab2 vgs output](https://user-images.githubusercontent.com/90343497/132996910-ccbf68fc-07d9-4d35-a7a4-e5b640c58fee.png)
-CMOS voltage Transfer characcteristics:
-When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called Complementary Mosfet.
-MOSFET as switch:
-With infinite OFF resistance when |Vgs|<|Vth|
-With finite ON resistance when |Vgs|>|Vth|
-notes pic
-![20210914_015850](https://user-images.githubusercontent.com/90343497/133161510-26ba6dc1-856c-4adb-af0e-9d61a23307d5.jpg)
 
-current path
+Below image is spice simulation of Id vs Vds for the short channel of NMOS
+
+![lab2 vds spice simulation](https://user-images.githubusercontent.com/90343497/132996861-89a48dbf-b89c-4d65-b2d7-3324b3ac0d22.png)
+
+Below image is output waveform of Id vs Vds curve for short channel of NMOS
+
+![lab2 vds output](https://user-images.githubusercontent.com/90343497/132996871-f5a8f4ed-ffa4-4391-91ff-812866b2c8f8.png)
+
+Below image is spice file of Id vs Vgs where Voltage(Vds) is sweep from 0 to 2.5
+
+![lab2 vgs spice](https://user-images.githubusercontent.com/90343497/132996903-5427e994-5f8e-4072-8e82-dcacfdd18cb2.png)
+
+Below image is simulation of Id vs Vgs curve 
+
+![lab2 vgs simulation](https://user-images.githubusercontent.com/90343497/132996906-91e08918-5bff-42aa-aab5-767ff04a8a31.png)
+
+Below image is output waveform of Id vs Vgs
+
+![lab2 vgs output](https://user-images.githubusercontent.com/90343497/132996910-ccbf68fc-07d9-4d35-a7a4-e5b640c58fee.png)
+
+### CMOS voltage Transfer characcteristics:
+- When Vgs is given to CMOS one of the mosfet will be off and other mosfet will be on so this is called Complementary Mosfet.
+- MOSFET as switch:
+  - With infinite OFF resistance when |Vgs|<|Vth|
+  - With finite ON resistance when |Vgs|>|Vth|
+
+Fig 18 shows the behavior of PMOS and NMOS when Vin is changing
+
+![20210914_015850](https://user-images.githubusercontent.com/90343497/133215276-24f79cec-8a3f-46c8-948d-f4777ac1fdf7.jpg)
+
+ Fig 19 illustrates the direction of current path
+ - Idsp Drain to source current through PMOS and it will charge the output load Capacitor
+ - Idsn Drain to source current throught NMOS and this will discharge the output load Capacitor
+ - Idsp=-Idsn
+ - Idsp+Idsn=0
+
 ![CMOS](https://user-images.githubusercontent.com/90343497/133161606-8cdde982-96af-4748-9c74-9c4ae0c9db17.png)
 
-observations
+ Fig 20 is the observations made from the CMOS inverter and load curve of NMOS 
+ 
 ![20210914_005636](https://user-images.githubusercontent.com/90343497/133161815-5911eba9-107d-4ee8-ba7c-9127a411156f.jpg)
+
+ Fig 21 depicts changing the PMOS curve in terms of Vin
+ 
 ![20210914_005735](https://user-images.githubusercontent.com/90343497/133161827-e47e0360-5d6d-4a20-92c0-0b99d5bba8d8.jpg)
 
-load curve of pmos transistor
-![image](https://user-images.githubusercontent.com/90343497/133163607-c03aee6b-75d2-4159-a145-2624a519de1f.png)
+- To change the PMOS curve in terms of Vin and Vout , few observation to made:
+ Vgsp | V | Vin=Vgsp+Vdd
+ -----|---|-------------
+ Vgsp1|   0  |     2      |
+ Vgsp1| -0.5 |    1.5     |
+ Vgsp1|  -1  |     1      |
+ Vgsp1| -1.5 |    0.5     |
+ Vgsp1|  -2  |     0      |
 
+- As Vout = Vdd + Vdsp
+Load curve of PMOS transistor
 
-voltage transfer characteristics
+ Fig 22 shows that when Vin and Vout of PMOS and NMOS are taken in one graph they are intersecting at some voltages and those intersection points to be plotted on Vin vs Vout which will give the Voltage Transfer Characteristics of CMOS
+
 ![20210914_005949](https://user-images.githubusercontent.com/90343497/133161916-cba740fc-0c6b-408d-b7ee-d71956dc98d9.jpg)
 
 Day3:
-lab3 screenshots
-To plot the voltage Transfer Characteristics of CMOS inverter, while simulating the spice file of Voltage transfer characteristics use the below command
-plot out vs in
+#### lab3 activity:
+- To plot the voltage Transfer Characteristics of CMOS inverter, while simulating the spice file of Voltage transfer characteristics use the below command
+  - plot out vs in
+ 
+Below image is spice file of voltage transfer characteristics of CMOS
+ 
 ![lab3 spice file vtc](https://user-images.githubusercontent.com/90343497/132996978-0aa7ceb3-6bb7-427f-a645-e3bb7c8a5ef5.png)
+
+Below image is spice simulation of voltage transfer characteristics of CMOS
+
 ![lab 3 simulation vtc](https://user-images.githubusercontent.com/90343497/132996987-16a6d318-de5f-48b8-8b22-85044ad295d9.png)
+
+ Below image waveform of voltage transfer characteristics of CMOS
+ 
 ![lab 3 vtc output](https://user-images.githubusercontent.com/90343497/132997004-5f73393d-137b-4e19-b4c1-1191773fe998.png)
-To plot the transient analysis of CMOS inverter along with the input curve, while simulating the spice file of Transient analysis use the below command:
-plot out vs time in
-To get the pulse waveform:In below spice file of transient analysis of CMOS,in the netlist description rise time,fall time,starting,
-ex:Vin in 0 PULSE(0 1.8 0 0.1ns 0.1ns 2ns 4ns)
-first value inside pulse is
-second value inside pulse is
-third value inside pulse is
-fourth value inside pulse is
-fifth value inside pulse is
-sixth value inside pulse is
-seventh value inside pulse is
+
+- To plot the transient analysis of CMOS inverter along with the input curve, while simulating the spice file of Transient analysis use the below command:
+  - plot out vs time in
+- To get the pulse waveform:In below spice file of transient analysis of CMOS,in the netlist description rise time,fall time,starting,
+  - ex:Vin in 0 PULSE(0 1.8 0 0.1ns 0.1ns 2ns 4ns)
+    - first value inside pulse is minimum voltage level
+    - second value inside pulse is
+    - third value inside pulse is initial delay
+    - fourth value inside pulse is rise time 
+    - fifth value inside pulse is fall time 
+    - sixth value inside pulse is pulse width
+    - seventh value inside pulse is time period
+ 
+ Below image is spice file of transient analysis of CMOS
+ 
 ![lab3 tran spice file](https://user-images.githubusercontent.com/90343497/132997019-a840dca0-2c6a-483e-b81e-969984bec8a0.png)
+
+ Below image is spice simulation of transient analysis of CMOS
+
 ![lab 3 tran spice simulation](https://user-images.githubusercontent.com/90343497/132997033-415ba4dc-6bc7-4e75-9f76-618ce5cc132e.png)
+
+ Below image is output waveform of transient analysis of CMOS which give rise time delay and fall time delay
+ 
 ![lab 3 tran output](https://user-images.githubusercontent.com/90343497/132997046-769ca728-1b6c-40c2-8f43-5c1ba8669901.png)
 
-To calculate the rise time delay and fall time delay we will do the transient analysis of CMOS
-How to calculate the output rise time delay and fall time delay of an inverter:
-output rise time delay = rise time of output - fall time of input at 50% of Vout
-output fall time delay = fall time of output - rise time of input at 50% of Vout
-The characteristics that define the CMOS inverter robustness are:
-1.Switching threshold voltage
-2.Noise Margin
-3.Power supply variation
-4.Device variations
-Switching threshold voltage of CMOS inverter(Vm):
-Switching threshold voltage is one of the parameter that define the CMOS inverter robustness
-For getting the Switccing threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region 
+- To calculate the rise time delay and fall time delay we will do the transient analysis of CMOS
+- How to calculate the output rise time delay and fall time delay of an inverter:
+  - output rise time delay = rise time of output - fall time of input at 50% of Vout
+  - output fall time delay = fall time of output - rise time of input at 50% of Vout
+
+#### The characteristics that define the CMOS inverter robustness are:
+1. Switching threshold voltage
+2. Noise Margin
+3. Power supply variation
+4. Device variations
+
+####Switching threshold voltage of CMOS inverter(Vm):
+- Switching threshold voltage is one of the parameter that define the CMOS inverter robustness
+- For getting the Switccing threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region
+ Fig 23 illustrates the change in switching of voltage when PMOS width is 2.5 times greater than width of NMOS
+ 
 ![Screenshot (144)](https://user-images.githubusercontent.com/90343497/133135001-d7dd76b1-bcc9-404b-a7bb-e26906bba62e.png)
-Here we are making two observations with one CMOS having w=0.36u,l=0.25u i.e same ascept ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having ascept ratio(W/L) where is switching of voltage is more when widht of pmos is two times more than widht of nmos.
-Switching threshold voltage of cmos having same ascept ratio for both pmos and nmos is low compared to cmos having pmos of 2 times the width of nmos.
-At switching threshold voltage both pmos and nmos are in saturation region and both the transistors are turn "ON",at this voltage gain is high
-As Vin = Vout we can get Vgs = Vdd
-The two ways that are to get the below analytical expressions:
-1.Analytical expression of Vm as a funtion of (W/L)p and (W/L)n
-2.Analytical expression of (W/L)p and (W/L)n as a funtion of Vm
-Switching threshold voltage formulae
-1.image 28 is pending
-![20210914_010212](https://user-images.githubusercontent.com/90343497/133162361-ff47a6b1-3a74-47ec-8fbf-1fe27a0e5e6c.jpg)
-![20210914_010352](https://user-images.githubusercontent.com/90343497/133162420-cc15a5ea-ef38-4b83-bf7f-e9b153454374.jpg)
 
+- Here we are making two observations with one CMOS having Wn=Wp=0.36u,Ln=Lp=0.25u i.e same ascept ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having ascept ratio(W/L) where is switching of voltage is more when widht of pmos is two times more than widht of nmos.
+- Switching threshold voltage of cmos having same ascept ratio for both pmos and nmos is low compared to cmos having pmos of 2.5 times the width of nmos.
+- At switching threshold voltage both pmos and nmos are in saturation region and both the transistors are turn "ON",at this voltage gain is high.
+- As Vin = Vout we can get Vgs = Vdd
+- The two ways that are to get the below analytical expressions:
+- As we know 
+- Idsp=-Idsn
+- Idsp+Idsn=0
+  1.Analytical expression of Vm as a funtion of (W/L)p and (W/L)n
+    - let **Id = μn.Cox.(W/L).[(Vgs-Vt)Vdsat-(Vdsat^2/2)]**
+    - Id in terms of Idsn and Idsp
+    - **Idsn = kn.[(Vm-Vt)Vdsatn-(Vdsatn^2/2)]**
+    - **Idsp = kp.[(Vm-Vdd-Vt)Vdsatp-(Vdsatp^2/2)]**
+    - Equating and solving the Idsn and Idsp as per Idsp+Idsn=0
+    - **kp.[([Vm-Vdd-Vt].Vdsatp)-Vdsatp^2/2]+kn.[([Vm-Vt].Vdsatn)-Vdsatn^2/2]=0**
+    - Solving the above form Vm
+    - **Vm=R.Vdd/(1+R)**
+        -  where R=(kp.Vdsatp)/(kn.Vdsatn) 
+  2.Analytical expression of (W/L)p and (W/L)n as a funtion of Vm
+    - As Idsp=-Idsn
+    - kn.[(Vm-Vt)Vdsatn-(Vdsatn^2/2)] = -kp.[(Vm-Vdd-Vt)Vdsatp-(Vdsatp^2/2)]
+    - **(kp.Vdsatp)/(kn.Vdsatn) =[(Vm-Vt)-(Vdsatn/2)]/[(-Vm+Vdd+Vt)-(Vdsatp/2)]**
 
-table:
-observations:
-1.When pmos width is 2 times the width of nmos the rise time delay and fall time delay is almost equal which is characterstics of clock inverter/buffer
-2.The remaining observations can be used for data path where data arrival time is less than data required time.
-3.When pmos width is 4.7 times the nmos then the vm is lies between pmos of widht 4 times the nmos widht and pmos of width 5 times the nmos width
-4.On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
-Day4:
+- Here few observations from the below table to check the behavior of Vm when width of PMOS is increasing.
+
+ Wp/Lp | x.Wn/Ln | Rise delay | Fall time |   Vm   |
+ ------|---------|------------|-----------|--------|
+ Wp/Lp | 1.Wn/Ln |    148ps   |   71ps    |  0.99V |
+ Wp/Lp | 2.Wn/Ln |    80ps    |   86ps    |  1.2V  |
+ Wp/Lp | 3.Wn/Ln |    57ps    |   80ps    |  1.25V |
+ Wp/Lp | 4.Wn/Ln |    45ps    |   84ps    |  1.35V |
+ Wp/Lp | 5.Wn/Ln |   3 7ps    |   88ps    |  1.4V  |
+
+- Observations:
+  1. When pmos width is 2 times the width of nmos the rise time delay and fall time delay is almost equal which is characterstics of clock inverter/buffer
+  2. The remaining observations can be used for data path where data arrival time is less than data required time.
+  3. When pmos width is 4.7 times the nmos then the vm is lies between pmos of widht 4 times the nmos widht and pmos of width 5 times the nmos width
+  4. On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
+### Day4:
 Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
 ![20210914_010425](https://user-images.githubusercontent.com/90343497/133162598-5bac1f25-2b48-4748-86d5-98a6f7be8086.jpg)
 
