@@ -47,7 +47,8 @@
 
 ![20210914_014951](https://user-images.githubusercontent.com/90343497/133152317-243e8e80-8464-469b-a2e1-fce553d655c7.jpg)
 
-* Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load.
+* Spice can help the designer to tune the delay of a cell by adjusting Width(W) and Length(L) of a transistor device and spice simulation will give the output waveform of CMOS circuits
+* Readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load.
 
 - Fig 2 shows the readymade delay table:
 
