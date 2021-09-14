@@ -322,8 +322,8 @@ In the above fig 13 the marked values are model parameters
   - If Vin is low, no current flows from drain to source and PMOS acts as open circuit   
 
 - Fig 19 illustrates the direction of current path
- - Idsp Drain to source current through PMOS and it will charge the output load Capacitor
- - Idsn Drain to source current throught NMOS and this will discharge the output load Capacitor
+ - Idsp is Drain to source current through PMOS and it will charge the output load Capacitor
+ - Idsn is Drain to source current throught NMOS and this will discharge the output load Capacitor
  - Idsp=-Idsn
  - Idsp+Idsn=0
 
