@@ -476,9 +476,9 @@ In the above fig 13 the marked values are model parameters
 
 ![20210914_010521](https://user-images.githubusercontent.com/90343497/133162625-a99cd2ce-c345-46b0-b6b5-080d08dca509.jpg)
 
-- Vil is input voltage which is less than Vdd/2 and it could be nearly Vdd/4
+- Vil is input voltage which is less than Vdd/2 and it is around 10% of supply
   - Any input voltage lies between 0 and Vil should be considered as logic 0
-- Vih is input voltage which is greater than Vdd/2 and it could be nearly 3/4 of Vdd
+- Vih is input voltage which is greater than Vdd/2 and it is around 90% of supply
   - Any input voltage lies between Vih and Vdd should be consider as logic 1
 - Vol is output voltage which lies near to 0
   - Any output voltage lies between 0 and Vil should be considered as logic 0 as it may be used as logic 0 for next gate input
