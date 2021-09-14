@@ -149,7 +149,7 @@
   2. Vgs-Vds=Vth
   3. Vgs-Vds<Vth
 - When Vgs-Vds = Vt so at that point x,the strong inversion is about to happen.  
-- When there is no channel formed near the drain region then region is called the pinch-off region and the condition is Vgs-Vds<=Vt
+- When the above condition is met there is no channel formed near the drain region(Channel disappears at drain region) then this region is termed as **Pinch-off region** and the condition is Vgs-Vds<=Vt
 
  Fig 10 illustrates the pinch-off region
  
