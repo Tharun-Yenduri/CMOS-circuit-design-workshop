@@ -232,18 +232,18 @@ In the above fig 13 the marked values are model parameters
 ![fig 14](https://user-images.githubusercontent.com/90343497/132998124-6371df93-2792-431e-92a0-773bbaebe2e4.png)
 
 - In the above Fig 15 
-  - The region before Vds=Vgs-Vt is linear region which is linear function of Vds and 
+  - The region before Vds=Vgs-Vt is linear region which is linear function of Vds 
   - The region after Vds=Vgs-Vt is saturation region which is dependent on channel length modulation and Vds.
-- The channel length which is having below 0.25u is referred as short channel
+- In the below Fig 16 the channel length which is having below 0.25u is referred as short channel
 - When we are having the same W/L ratio with different width and Length:
   1. Id is quadratic dependent on Vgs when it is having long channel 
-  2. Id is linearly dependent on Vgs at low Vgs and quadratic dependent on Vgs at high Vgs  when it is having short channel
+  2. Id is quadratic dependent on Vgs at low Vgs and linear dependent on Vgs at high Vgs  when it is having short channel
 
 - Fig 16 shows the behaviour of NMOS when it is having long channel and short channel
 
 ![fig 15](https://user-images.githubusercontent.com/90343497/133208793-5c308208-a4bf-409b-8272-07511dcc99af.png)
 
-- To observe this situation we are using the same W/L ratio with different width and Length where we are calcualting the Id at constant Vds, the Id is increasing quadratic which is having long channel where as the Id is  quadratic function of Vgs at low gate voltage and linear function of Vgs at high gate voltage which is having short channel and this is occuring due to velocity saturation effect
+- To observe this situation we are using the same W/L ratio with different width and Length where we are calcualting the Id at constant Vds, the Id is increasing quadratic which is having long channel where as the Id is quadratic function of Vgs at low gate voltage and linear function of Vgs at high gate voltage which is having short channel and this is occuring due to velocity saturation effect
 
 #### There are four regions of operation for short channel:
 1. Cut-off region
