@@ -4,7 +4,7 @@
 # **Index**
 - Introduction to the workshop
 - Introduction to Sky130
-- #Day1:Basics of NMOS drain current(Id) vs Drain to Source voltage(Vds)
+- #Day1-:-Basics-of-NMOS-drain-current(Id)-vs-Drain-to-Source-voltage(Vds)
   - #Section-1:Introduction to Circuit design and Spice simulations
   - #Section-2:NMOS Resistive region and Saturation region
   - #Section-3:Introduction to spice
