@@ -1,29 +1,36 @@
 # **CMOS Ciruit Design and Spice Simulation using Sky130 Technology**
 ![image](https://user-images.githubusercontent.com/90343497/132997260-aeda2b04-fa37-4ebd-b032-93007941783f.png)
+
 ## Introduction of the workshop:
-This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology.This course content is divided for five days having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
+- This workshop is about CMOS Ciruit Design and Spice Simulation using sky130 Technology.This course content is divided for five days having both theory description and labs of Circuit design and Spice simulation.On the first day of workshop the topics covered are Introduction to spice simulation,Nmos resistive and saturation region of operation,introduction to spice.The second day of workshop is about Spice simulation for lower nodes and velocity saturation effect,CMOS voltage transfer characteristics.The third day of workshop is about CMOS voltage transfer characteristics-Spice simulations,Static behaviour-CMOS inverter robustness-Switch threshold voltage.The fourth day of workshop is about CMOS Noise Margin Robustness Evaluation.The fifth day of workshop is about CMOS power supply and device variation robustness evalation.  
 ## Introdution to Sky130: 
-Sky130 is a foundry which is used to built a chip using 130nm technology by providing pdk's(Process Development Kit)
+- Sky130 is a foundry which is used to built a chip using 130nm gate channel length by providing pdk's(Process Development Kit) i.e models,libraires. 
+- Sky130 releases data in open source format
+
 ## Day1:
+
+## Section-1:Introduction to Circuit design and Spice simulations
+
 ### What is circuit design and why do we need spice?
+
 * Circuit design is basically a way of achieving the required functionality by connecting PMOS and NMOS in certain manner.
 
- Fig1 illustrates Basic circuit design:
+- Fig1 illustrates Basic circuit design:
 
 ![20210914_014951](https://user-images.githubusercontent.com/90343497/133152317-243e8e80-8464-469b-a2e1-fce553d655c7.jpg)
 
 * Spice will tune the delay of cell by Widht(W) and Length(L) of cell and spice simulation will give the output waveform of CMOS circuits,readymade delay table of sample circuit which will give the delay of circuit by using input slew and output load.
 
- Fig 2 shows the readymade delay table:
+- Fig 2 shows the readymade delay table:
 
 ![fig2](https://user-images.githubusercontent.com/90343497/132997730-a0370e4e-3cd0-4cb6-9d15-5c3c702e0149.png)
 
-### Introduction NMOS in ciruit design:
+### Introduction to NMOS in ciruit design:
 
 **N type Metal Oxide Semiconductor(NMOS):**
 - It is a four terminal device,Isolation region(SiO2) will differentiate the two transistors.
 
- Fig 3 depicts the cross sectional view of NMOS:
+- Fig 3 depicts the cross sectional view of NMOS:
 
 ![20210914_015013](https://user-images.githubusercontent.com/90343497/133152380-24a75c8d-0378-4ef6-ab43-3e3cfce09b88.jpg)
 
@@ -50,23 +57,25 @@ Sky130 is a foundry which is used to built a chip using 130nm technology by prov
 - By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
 - Threshold voltage(Vt):The voltage(Vgs) at which strong inversion occurs is called threshold voltageor It is minimum voltage required for the movement of electrons from source to drain.Spice model will give the threshold voltage of NMOS.
 
- Fig 4 shows strong inversion:
+- Fig 4 shows strong inversion:
 
 ![fig4(Threshold volatage)](https://user-images.githubusercontent.com/90343497/133072908-56f27654-e1a0-4a89-aef3-854401bf4510.png)
 
--Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
+- Body terminal is used to tune the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate electrons from p-substrate so additional potential is required for strong inversion.
 
- Fig 5 depicts the body effect in the presence of Vsb:
+- Fig 5 depicts the body effect in the presence of Vsb:
 
 ![fig5(tune Vth using body)_LI](https://user-images.githubusercontent.com/90343497/133082790-dfa7af78-4970-4688-84a1-04410de8b933.jpg)
 
-In the above figure:
-1. Additional reverse bias voltage at source and bulk
-2. Increase in depletion width due to additional reverse bias voltage
+- In the above figure:
+  1. Additional reverse bias voltage at source and bulk
+  2. Increase in depletion width due to additional reverse bias voltage
 
-Fig 6 shows derivation of formula for Threshold Voltage:
+- Fig 6 shows derivation of formula for Threshold Voltage:
 
 ![WhatsApp Image 2021-09-14 at 2 35 05 AM](https://user-images.githubusercontent.com/90343497/133156418-a861c567-8caa-45a3-8d56-d6e2a72c0d5d.jpeg)
+
+## Section-2:NMOS Resistive region and Saturation region
 
 ### 2.Resistive Region:
 - By increasing the potential beyond the threshold voltage, accumulation of electrons will be more between source and drain and this will leads to increase the channel width and there will be flow of electrons between source and drain.
