@@ -210,10 +210,24 @@ Fig 16 shows the behaviour of NMOS when it is having long channel and short chan
   - Velocity saturation effect says for the lower values of electric field, the velocity of electric field is increases linear with electric field but after critical electric field the velocity of electric field become saturate.
 
 Below image is the graph between electric charge and its velocity
-![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
-for the both cases the formulae of velocity is 
-velocity formulae
 
+![Screenshot (140)](https://user-images.githubusercontent.com/90343497/133118185-35b0d014-1c5c-4936-8406-1a9714558362.png)
+
+- As we know formula Velocity = mobility.electric field
+  - **Vn(m/s)=μn.∈/(1+(∈/∈c)) for ∈ <= ∈c**
+  - **Vsat                     for ∈ >= ∈c**
+  - For contunity, put ∈ = ∈c
+  - **2Vsat = μn.∈c** 
+      - **∈c = (2Vsat/μn)** 
+   - when rederiving the drain current using above condition
+   - Id=-Vn(x).Qi(x).W
+   - **Id = (μn.Cox/1+(Vds/∈c.L)).(W/L).[(Vgs-Vt)Vds-Vds^2/2]** which is too complex while using 
+   - Let **Id = kn[(Vgt.Vmin)-Vmin^2/2].[1+λVds]** 
+     - where Vgt= Vgs-Vt
+     - where Vmin=min(Vgt,Vds,Vdsat)
+     - Vdsat is one of the model parameter
+    - When Vmin is Vdsat the drain current equation in Velocity Saturation region:
+      - **Id = kn.[(Vgt.Vdsat)-Vdsat^2/2].[1+λVds]**  
 ![20210914_005255](https://user-images.githubusercontent.com/90343497/133161324-25bbecc7-87b3-4b95-bcce-b213742db04b.jpg)
 ![20210914_014951](https://user-images.githubusercontent.com/90343497/133161341-f9f93ef2-3e0b-44a2-82c0-8b56df349f14.jpg)
 
