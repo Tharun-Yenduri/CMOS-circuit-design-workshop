@@ -394,7 +394,7 @@ In the above fig 13 the marked values are model parameters
  
 ![lab3 tran spice file](https://user-images.githubusercontent.com/90343497/132997019-a840dca0-2c6a-483e-b81e-969984bec8a0.png)
 
-- Below image is spice simulation of transient analysis of CMOS
+- Below image is spice simulation log of transient analysis of CMOS
 
 ![lab 3 tran spice simulation](https://user-images.githubusercontent.com/90343497/132997033-415ba4dc-6bc7-4e75-9f76-618ce5cc132e.png)
 
@@ -515,7 +515,7 @@ In the above fig 13 the marked values are model parameters
 
 ![lab 4 noise margin spice file](https://user-images.githubusercontent.com/90343497/132997092-e9254618-ff93-4992-b242-f7bf6a4d9574.png)
 
-- Below image is the spice simulation of VtC curve to get the Noise Margin
+- Below image is the spice simulation log of VtC curve to get the Noise Margin
 
 ![lab4 noise margin simulation](https://user-images.githubusercontent.com/90343497/132997099-9256696b-8298-481c-b423-db2865c2bf72.png)
 
@@ -549,7 +549,7 @@ In the above fig 13 the marked values are model parameters
  
 ![lab5 supply variation spice file](https://user-images.githubusercontent.com/90343497/132997200-2ea3267f-17f4-4537-a1c8-080ca00cd363.png)
 
-- Below image is the spice simulation 
+- Below image is the spice simulation log for supply variation 
  
 ![lab 5 supply variation simulation](https://user-images.githubusercontent.com/90343497/132997204-58f29c12-90fc-462f-a0e2-fdd410194d7d.png)
 
@@ -596,7 +596,7 @@ In the above fig 13 the marked values are model parameters
 
 ![Screenshot (123)](https://user-images.githubusercontent.com/90343497/133271938-c6de2d47-0b00-42f0-815c-dab04b4f89ea.png)
 
-- Oxide thickness(Cox):
+- Oxide thickness(tox):
   - While fabricating the mosfet there will be difference in ideal oxide thickness of gate and actual oxide thickness of gate
   - As we know Id is dependent on Cox,so there will be impact on Id due to Oxide thickness variation.
 
@@ -628,7 +628,7 @@ In the above fig 13 the marked values are model parameters
  
 ![lab 5 device variation spice file](https://user-images.githubusercontent.com/90343497/132997212-50bd1649-e17d-429e-ac1b-61437907af65.png)
 
-- Below image is spice simulation for device variation
+- Below image is spice simulation log for device variation
  
 ![lab 5 device variation spice simulation](https://user-images.githubusercontent.com/90343497/132997218-735d036f-ae66-4940-8305-8db2abf383ef.png)
 
@@ -641,7 +641,7 @@ In the above fig 13 the marked values are model parameters
 
 ## Conclusion
 
-- In this Workshop I got more practical knowledge on CMOS by doing Labs and i have learnt the concepts from scratch like Introduction to NMOS and its regions to very great extent like Static behaviour of evaluation of CMOS under different variations.Workshop was delivered in a way to get both theoretical knowledge and practical knowledge right after the lectures and there are assessments  .I got positive hope by doing this workshop that i can do my best in VLSI industry.
+- In this Workshop I got more practical knowledge on CMOS by doing Labs and i have learnt the concepts from scratch like Introduction to NMOS and its regions to very great extent like Static behaviour of evaluation of CMOS under different variations.Workshop was delivered in a way to get both theoretical knowledge and practical knowledge right after the lectures and there are assessments to test the knowledge and to gain theoretical knowledge practically.With the help of spice simulation labs i got a basic idea of circuit designing.It help me to understand various delays of a cell.I got positive hope by doing this workshop that i can do my best in VLSI industry.
 
 ## Reference
 - https://www.vsdiat.com/
