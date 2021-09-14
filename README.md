@@ -81,7 +81,7 @@
 3. Saturation Region (Vgs>Vth) & (Vds>=Vgs-Vth)
 
 ### 1.Cut-off Region:
-- Initially when Vgs is  zero there will be no transfer of electrons between source and drain,so resistance of Sd is high.This region is called Cutoff Region.
+- Initially when Vgs is zero there will be no transfer of electrons between source and drain,so channel doesn't form under gate area region hence resistance of Source to Drain is high.This region is called Cutoff Region.
 
 ### Strong Inversion and threshold voltage:
 - By applying certain potential there will be formation of depletion region and depletion widht will increase by increasing the potential at Vgs,at some point the part of p-type substrate i.e between source and drain will be converted to n-type material,so electrons will be accumulated between source and drain, this phenomenon is called strong inversion 
