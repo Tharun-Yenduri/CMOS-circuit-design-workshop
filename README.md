@@ -423,7 +423,7 @@ In the above fig 13 the marked values are model parameters
  
 ![Screenshot (144)](https://user-images.githubusercontent.com/90343497/133135001-d7dd76b1-bcc9-404b-a7bb-e26906bba62e.png)
 
-- Here we are making two observations with one CMOS having Wn=Wp=0.36u,Ln=Lp=0.25u i.e same ascept ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having ascept ratio(W/L) where is switching of voltage is more when widht of pmos is two times more than widht of nmos.
+- Here we are making two observations with one CMOS having Wn=Wp=0.36u,Ln=Lp=0.25u i.e same aspect ratio(W/L) for both pmos and nmos and other CMOS having W=0.9u,l=0.25 for pmos and w=0.36,l=0.25 for nmos then the switching of Voltage is less when pmos and nmos having aspect ratio(W/L) where is switching of voltage is more when width of pmos is two times more than width of nmos.
 - Switching threshold voltage of cmos having same ascept ratio for both pmos and nmos is low compared to cmos having pmos of 2.5 times the width of nmos.
 - At switching threshold voltage both pmos and nmos are in saturation region and both the transistors are turn "ON",at this voltage gain is high.
 - As Vin = Vout we can get Vgs = Vdd
