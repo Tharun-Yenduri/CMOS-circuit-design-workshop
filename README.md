@@ -466,7 +466,7 @@ In the above fig 13 the marked values are model parameters
 
 ## Section-1:Static behaviour evaluation of CMOS inverter robustness-Noise Margin
 
-- Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
+- Noise Margin:Any inverter or any gates can have noise margin i.e cross-talks,glitches and those cross talks and glitches can be handled with the help of the noise margin
 
 - Fig 25 illustrates the ideal I/O characteristics of inverter with Infinite slope and finite slope
 
