@@ -92,6 +92,7 @@
 ![fig4(Threshold volatage)](https://user-images.githubusercontent.com/90343497/133072908-56f27654-e1a0-4a89-aef3-854401bf4510.png)
 
 - Body terminal is used to tune(increase/decrease) the threshold voltage, by applying voltage at Vsb there will be additonal reverse bias which increases the depletion layer width between source and p-substrate will increase as source will accumulate more electrons from p-substrate so additional potential is required for strong inversion(under gate area).
+- By applying positive Vsb voltage threshold increases and by applying negative Vsb threshold voltage decreases.This phenomenon is called **Body Effect**.
 
 - Fig 5 depicts the body effect in the presence of Vsb:
 
