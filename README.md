@@ -183,7 +183,7 @@ In the above fig 13 the marked values are model parameters
 
  Fig 14 shows the nodes of the different components and the netlist description for the circuit:
 
-![fig13](https://user-images.githubusercontent.com/90343497/133114468-da6efa83-4cf2-4593-ad75-c49911597f33.png)
+![fog12](https://user-images.githubusercontent.com/90343497/133302339-5ac4cb5e-3ba7-454b-8e10-e337e3e4d331.png)
 
 - To run the spice file the command is ngspice filename
 - To plot the curve, let say we need Id vs Vds,after running the spice file we need to give plot -vdd#branch
