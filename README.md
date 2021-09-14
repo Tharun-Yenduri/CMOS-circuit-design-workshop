@@ -138,7 +138,7 @@ Fig 6 shows derivation of formula for Threshold Voltage:
 
  Fig 13 depicts the model and model parameters:
 
-![fig11](https://user-images.githubusercontent.com/90343497/133114344-e227babf-dab4-4adb-b896-d09838f3916e.png)
+![fig13](https://user-images.githubusercontent.com/90343497/133275908-cb17c1b3-fa40-499c-84a3-565f4cef00e5.png)
 
 In the above fig 13 the marked values are model parameters 
 
