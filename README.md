@@ -193,7 +193,7 @@ In the above fig 13 the marked values are model parameters
 
 ![lab1 spicefile](https://user-images.githubusercontent.com/90343497/132996341-b03e2f86-ef34-4dd1-b6f2-60882db8f150.png)
 
-- Below image is spice simulation of NMOS to get the Id vs Vds curve:
+- Below image is simulation log of NMOS to get the Id vs Vds curve:
 
 ![lab1](https://user-images.githubusercontent.com/90343497/132996762-585e5086-f355-46ae-8920-05b1661d90e1.png)
 
