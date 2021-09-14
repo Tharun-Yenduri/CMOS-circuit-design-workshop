@@ -25,8 +25,8 @@
      - Lab activity-5
      - Section-2:Statice behaviour evaluation-CMOS inverter robustness-Device variation
      - Lab activity-6
-    - Conclusion
-    - Reference
+     - Conclusion
+     - Reference
    
 ## Introduction to the workshop
 
