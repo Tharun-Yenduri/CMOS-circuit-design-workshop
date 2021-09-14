@@ -432,7 +432,7 @@ Fig 23 depicts the actual I/O characteristics of inverter and the scale from 0 t
 
  Wp/Lp | x.Wn/Ln |  NMh  | Nml |   Vm   |
  ------|---------|------------|-----------|--------|
- Wp/Lp | 1.Wn/Ln |   0.3  |   71ps    |  0.99V |
+ Wp/Lp | 1.Wn/Ln |  0.3  |   71ps    |  0.99V |
  Wp/Lp | 2.Wn/Ln |    0.35    |   86ps    |  1.2V  |
  Wp/Lp | 3.Wn/Ln |    0.4    |   80ps    |  1.25V |
  Wp/Lp | 4.Wn/Ln |    0.42    |   84ps    |  1.35V |
