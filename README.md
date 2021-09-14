@@ -202,9 +202,9 @@ In the above fig 13 the marked values are model parameters
 ![lab1-output](https://user-images.githubusercontent.com/90343497/132996820-cf972072-a1a1-4f36-8ecd-4ecc1dc0bfba.png)
 
 - How to check the Id:
-  - Left click on the graph where we need to get the value of Id,
-  - Some values will be displayed on terminal like x0 and y0,x0 is the value on x-axis and y0 is the value on y-axis,
-  - As the above curve is Id vs Vds, y0 is the value of Id in amperes,
+  - Left click on the graph where we need to get the value of Id
+  - Some values will be displayed on terminal like x0 and y0,x0 is the value on x-axis and y0 is the value on y-axis
+  - As the above curve is Id vs Vds, y0 is the value of Id in amperes
   - In spice file, type of corner should be mentioned.
 - There are five different type of corners,they are:
   1. tt(typical corner)
@@ -212,6 +212,9 @@ In the above fig 13 the marked values are model parameters
   3. ff(fast fast corner)
   4. ss(slow slow corner)
   5. fs(fast slow corner)
+
+- In the above corners first letter represent the NMOS device and second letter represent the PMOS device
+- let's say in sf corner first letter **s** represent NMOS device and second letter **f** represent PMOS device
 
 - Below image shows different w and l technologies used in lab
 
