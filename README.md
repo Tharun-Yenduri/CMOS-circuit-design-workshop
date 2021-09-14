@@ -116,7 +116,7 @@
   - **Qi(x)∝ -(Vgs-Vt)** 
 - Let's take L be effective channel length and consider length of the channel on x-axis and width of the channel on y-axis
 - V(x) is voltage at point 'x' along channel
-- So **Vgs-V(x)** is effective gate to channel voltage at that any particular point .
+- So **Vgs-V(x)** is effective gate to channel voltage at any particular point between source and drain .
 - Induced charge at point at 'x' is Q(x) is directly proportional to ([Vgs-V(x)]-Vth)
   - Qi(x)∝ -([Vgs-V(x)]-Vt)
   - Qi(x) = -Cox ([Vgs-V(x)]-Vt)
@@ -127,7 +127,7 @@
         = 3.5x10e-11 F/m
    - tox = oxide thickness
 - There are two types of current from device point of view:
-1. Drift current-current due to potential difference for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
+1. Drift current-current due to potential difference, for example due to potential at vds there is voltage of channel difference at source(0) and drain(Vds)
 2. Diffusion current- current due to difference in charge carrier concentration
 - As there is potential difference in channel i.e 0 to Vds there will be drift current
 - **Id = velocity of charge carriers x available charge over channel width**
