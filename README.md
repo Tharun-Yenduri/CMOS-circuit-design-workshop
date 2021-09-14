@@ -356,7 +356,7 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
 3. Power supply variation
 4. Device variations
 
-####Switching threshold voltage of CMOS inverter(Vm):
+#### Switching threshold voltage of CMOS inverter(Vm):
 - Switching threshold voltage is one of the parameter that define the CMOS inverter robustness
 - For getting the Switccing threshold voltage of CMOS Vin=Vout ,the point at where the region of pmos and nmos are at saturation region
  Fig 23 illustrates the change in switching of voltage when PMOS width is 2.5 times greater than width of NMOS
@@ -394,7 +394,7 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
  Wp/Lp | 2.Wn/Ln |    80ps    |   86ps    |  1.2V  |
  Wp/Lp | 3.Wn/Ln |    57ps    |   80ps    |  1.25V |
  Wp/Lp | 4.Wn/Ln |    45ps    |   84ps    |  1.35V |
- Wp/Lp | 5.Wn/Ln |   3 7ps    |   88ps    |  1.4V  |
+ Wp/Lp | 5.Wn/Ln |    37ps    |   88ps    |  1.4V  |
 
 - Observations:
   1. When pmos width is 2 times the width of nmos the rise time delay and fall time delay is almost equal which is characterstics of clock inverter/buffer
@@ -402,8 +402,13 @@ Below image is spice simulation of voltage transfer characteristics of CMOS
   3. When pmos width is 4.7 times the nmos then the vm is lies between pmos of widht 4 times the nmos widht and pmos of width 5 times the nmos width
   4. On increasing the widht of pmos the rise time delay is decreasing,so more area will be available to charge the capacitor and vm is increasing
 ### Day4:
-Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
+- Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glitches and those cross talks and glithces can be handled by handling the noise margin
+
+Fig 22 illustrates the ideal I/O characteristics of inverter with Infinite slope and finite slope
+
 ![20210914_010425](https://user-images.githubusercontent.com/90343497/133162598-5bac1f25-2b48-4748-86d5-98a6f7be8086.jpg)
+
+Fig 23 depicts the actual I/O characteristics of inverter and the scale from 0 to Vdd to show the noise margin high and noise margin low
 
 ![20210914_010521](https://user-images.githubusercontent.com/90343497/133162625-a99cd2ce-c345-46b0-b6b5-080d08dca509.jpg)
 
@@ -415,12 +420,24 @@ Noise Margin:Any inverter or any gates can have noise margin i.e cros-talks,glit
   - Any output voltage lies between 0 and Vil should be considered as logic 0 as it may be used as logic 0 for next gate input
 - Voh is output voltage which lies near to Vdd
   - Any output voltage lies between Vih and Vdd should be consider as logic 1 as it may be used as logic 1 for next gate input
+
+ Fig 24 shows the Noise Margin summary of bumps
+ 
 ![Screenshot (100)](https://user-images.githubusercontent.com/90343497/133162859-10d3dd18-0d01-4c30-b79c-d6470e121335.png)
 
-From the above pic:
-If any bump height lies between Vol and Vil can be considered as logic 0
-If any bump height lies between Vil and Vih can be considered as undefined logic as bump can go high or low
-If any bump height lies between Vih and Voh can be considered as logic 1
+- From the above image:
+  1. If any bump height lies between Vol and Vil can be considered as logic 0
+  2. If any bump height lies between Vil and Vih can be considered as undefined logic as bump can go high or low
+  3.If any bump height lies between Vih and Voh can be considered as logic 1
+
+ Wp/Lp | x.Wn/Ln |  NMh  | Nml |   Vm   |
+ ------|---------|------------|-----------|--------|
+ Wp/Lp | 1.Wn/Ln |   0.3  |   71ps    |  0.99V |
+ Wp/Lp | 2.Wn/Ln |    0.35    |   86ps    |  1.2V  |
+ Wp/Lp | 3.Wn/Ln |    0.4    |   80ps    |  1.25V |
+ Wp/Lp | 4.Wn/Ln |    0.42    |   84ps    |  1.35V |
+ Wp/Lp | 5.Wn/Ln |    0.42    |   88ps    |  1.4V  |
+ 
 Based on the observation table:
 ![Screenshot (102)](https://user-images.githubusercontent.com/90343497/133137705-00df9933-2bfb-4c6b-88cd-8cf2d71eacf9.png)
 1.If the pmos width lies between 1.8 and 2.2 there will be no huge difference in noise margin
