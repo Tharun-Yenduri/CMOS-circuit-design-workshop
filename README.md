@@ -640,6 +640,37 @@ In the above fig 13 the marked values are model parameters
 - Conclusion from lab:
   - As PMOS width is higher than the NMOS,the output of PMOS is staying for long time when compared to NMOS curve.
 
+## NMOS Inverter
+NMOS Inverter and the Issue of Power Dissipation with NMOS and PMOS Transistors
+Using just either NMOS or PMOS transistors also, it is possible to design a logic gate. The basic design of NMOS inverter is shown below.
+
+![nmos inverter with load resistance](https://www.allaboutelectronics.org/wp-content/uploads/2023/04/Screenshot-2023-04-14-at-1.24.31-PM.png)
+
+Let’s assume that the threshold voltage (VT) of the NMOS transistor is 0.5 V. When VGS = 5V or when VGS > VT , (Let’s assume that logic ‘1’ is 5V) then MOSFET will be ON and acts as a close switch (Ideally, the ON resistance of the MOSFET is 0 ohm) And the output will get connected to the ground. But actually, there will be some finite ON resistance of the MOSFET (10s of Ohm). And the drain resistor RD is in kilo-ohm. Therefore, in actual case also, the output will be very close to 0V or logic ‘0’.
+
+![nmos inverter](https://www.allaboutelectronics.org/wp-content/uploads/2023/04/Screenshot-2023-04-14-at-1.28.41-PM.png)
+
+Similarly, when VGS = 0V or logic ‘0’ then MOSFET will be OFF and it will act as a open switch. And through the drain resistor, the output will get connected to the supply voltage. That means when input is 0 then output is VDD.
+
+![nmos inverter](https://www.allaboutelectronics.org/wp-content/uploads/2023/04/Screenshot-2023-04-14-at-1.32.50-PM.png)
+
+And in this way, this circuit will act as an inverter.
+
+Now, when we are designing this logic gate using a discrete components, then it is possible to include large drain resistor in the circuit. But in the integrated circuits, it is difficult to fabricate a resistor with a large value.
+Therefore, in the ICs, instead of resistor, the MOSFET is used as an active load.
+As shown below, the gate and drain terminals of the MOSFET are connected to VDD. That means the upper NMOS transistor remains in the ON condition. And in the ON condition, its ON resistance will provide the required drain resistance for the Lower NMOS transistor.
+
+![nmos inverter](https://www.allaboutelectronics.org/wp-content/uploads/2023/04/Screenshot-2023-04-14-at-1.39.30-PM.png)
+
+Of course, by changing the MOSFETs device parameters, it is possible to ensure that, its ON resistance is in kΩ.
+
+The issue with this design is that, there is a static power dissipation across the transistor.
+For example, when the input to the inverter is ‘1’ then NMOS will be ON, and it provides very low resistance. And because of that, there is power dissipation across the NMOS transistor.
+That means, if the input to the inverter is a clock signal which is continuously changing between ‘1’ and ‘0’ then for half of the total time, there will be a static power dissipation across the NMOS transistors.
+And the same is case with the logic gate designed using PMOS transistors.
+
+That means when we are designing the logic gates only using NMOS or PMOS transistors then there will be a static power dissipation. And the power dissipation becomes a critical factor when there are millions of such transistors in the circuit.
+
 ## Conclusion
 
 - In this Workshop I got more practical knowledge on CMOS by doing Labs and i have learnt the concepts from scratch like Introduction to NMOS and its regions to very great extent like Static behaviour of evaluation of CMOS under different variations.Workshop was delivered in a way to get both theoretical knowledge and practical knowledge right after the lectures and there are assessments to test the knowledge and to gain theoretical knowledge practically.With the help of spice simulation labs i got a basic idea of circuit designing.It help me to understand various delays of a cell.I got positive hope by doing this workshop that i can do my best in VLSI industry.
