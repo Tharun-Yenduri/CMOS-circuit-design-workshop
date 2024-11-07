@@ -671,6 +671,20 @@ And the same is case with the logic gate designed using PMOS transistors.
 
 That means when we are designing the logic gates only using NMOS or PMOS transistors then there will be a static power dissipation. And the power dissipation becomes a critical factor when there are millions of such transistors in the circuit.
 
+## Why NMOS supports strong 0 and weak 1?
+- When an NMOS transistor connects an output node to ground, it pulls the node strongly to 0 V (ground).. This is because there is no threshold voltage drop when NMOS pulls down to the ground, the drain can be pulled all the way to 0V
+- When NMOS transistor attempts to pulls an output to node VDD, it cannot reach to VDD due to threshold voltage drop.
+- As the output voltage Vout approaches to Vdd-Vth the NMOS transistor starts to turn off or become less conductive.
+- The higher voltage it can reaches around Vdd-Vt which is weak 1 becuase it doesn't reach a full Vdd.
+
+## Why PMOS supports strong 1 and weak 0?
+- When a PMOS transistor connects to VDD it strongly pulls the node strongly to VDD.
+- This is because, for PMOS, there is no threshold voltage drop when pulling up to 𝑉𝐷𝐷; the source of the PMOS is at 𝑉𝐷𝐷, so it can pull the drain up fully to 𝑉𝐷𝐷
+
+- When a PMOS transistor attempts to pull an output node down to ground, it suffers from a threshold voltage drop.
+- As the output voltage approaches 𝑉𝑇𝑃 above ground (around ∣𝑉𝑇𝑃∣), the PMOS transistor becomes less effective at pulling the node any lower.
+- Thus, it cannot pull down to a full 0 V, resulting in a "weak" 0.
+
 ## Conclusion
 
 - In this Workshop I got more practical knowledge on CMOS by doing Labs and i have learnt the concepts from scratch like Introduction to NMOS and its regions to very great extent like Static behaviour of evaluation of CMOS under different variations.Workshop was delivered in a way to get both theoretical knowledge and practical knowledge right after the lectures and there are assessments to test the knowledge and to gain theoretical knowledge practically.With the help of spice simulation labs i got a basic idea of circuit designing.It help me to understand various delays of a cell.I got positive hope by doing this workshop that i can do my best in VLSI industry.
